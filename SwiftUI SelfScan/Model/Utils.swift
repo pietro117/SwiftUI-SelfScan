@@ -44,8 +44,11 @@ class Utils {
 extension Image {
 
     func data(url:URL) -> Self {
+        
+        let urlString = url.absoluteString
+        let corrUrl = URL(string: urlString.replacingOccurrences(of: "image://", with: "http://52.157.215.89:39832/WebRetailProcessing/images?resource="))
 
-        if let data = try? Data(contentsOf: url) {
+        if let data = try? Data(contentsOf: corrUrl!) {
 
             return Image(uiImage: UIImage(data: data)!)
 
@@ -61,3 +64,8 @@ extension Image {
 
 }
 
+extension AnyTransition {
+    static var fadeAndSlide: AnyTransition {
+        AnyTransition.opacity.combined(with: .move(edge: .top))
+    }
+}

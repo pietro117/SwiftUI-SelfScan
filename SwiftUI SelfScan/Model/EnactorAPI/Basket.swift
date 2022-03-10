@@ -57,6 +57,7 @@ struct Basket: Codable {
     var currencyId: String
     var saleItemQuantity: Double
     var saleItemNetValue: Int
+    var promotionCalculation: PromotionCalculation?
     
     enum CodingKeys: String, CodingKey {
         //case id
@@ -65,6 +66,7 @@ struct Basket: Codable {
         case currencyId
         case saleItemQuantity
         case saleItemNetValue
+        case promotionCalculation
     }
     
     init(
@@ -72,18 +74,77 @@ struct Basket: Codable {
          balance: Int = 0,
          currencyId: String = "",
          saleItemQuantity: Double = 0.0,
-         saleItemNetValue: Int = 0) {
+         saleItemNetValue: Int = 0,
+         promotionCalculation: PromotionCalculation? = nil) {
 
         self.items = items
         self.balance = balance
         self.currencyId = currencyId
         self.saleItemQuantity = saleItemQuantity
         self.saleItemNetValue = saleItemNetValue
+        self.promotionCalculation = promotionCalculation
              
     }
 }
 
+struct PromotionCalculation: Codable {
+    
+    var itemsArray: [PromotionSavingItemWrapped]? = nil
+    var totalSaving: Int? = 0
+    
+    enum CodingKeys: String, CodingKey {
+        //case id
+        case itemsArray
+        case totalSaving
+    }
+    
+    init(
+        itemsArray: [PromotionSavingItemWrapped]? = [PromotionSavingItemWrapped](),
+        totalSaving: Int = 0) {
 
+            self.itemsArray = itemsArray
+            self.totalSaving = totalSaving
+             
+    }
+}
+
+struct PromotionSavingItemWrapped: Codable {
+    
+    var promotionSavingItem:PromotionSavingItem? = nil
+    
+    enum CodingKeys: String, CodingKey {
+        //case id
+        case promotionSavingItem
+    }
+    
+    init(
+        promotionSavingItem: PromotionSavingItem? = nil) {
+
+            self.promotionSavingItem = promotionSavingItem
+             
+    }
+}
+
+struct PromotionSavingItem: Codable {
+    
+    var saving: Int? = 0
+    var promotionDescription: String? = ""
+    
+    enum CodingKeys: String, CodingKey {
+        //case id
+        case saving
+        case promotionDescription
+    }
+    
+    init(
+        saving: Int = 0,
+        promotionDescription: String? = "") {
+
+            self.saving = saving
+            self.promotionDescription = promotionDescription
+             
+    }
+}
 
 struct BasketResponse: Codable {
     

@@ -23,17 +23,17 @@ struct CategoryView: View {
         VStack{
             
             //Header Icons - always shown
-            HStack{
-                
-                Button(action: {}){
-                    Image(systemName:"magnifyingglass")
-                        .font(.title)
-                        .foregroundColor(.black)
-                }
-                
-            }
-            .padding(.vertical,10)
-            .padding(.horizontal)
+//            HStack{
+//
+//                Button(action: {}){
+//                    Image(systemName:"magnifyingglass")
+//                        .font(.title)
+//                        .foregroundColor(.black)
+//                }
+//
+////            }
+//            .padding(.vertical,10)
+//            .padding(.horizontal)
             
             
             //Scrollable Product List
@@ -115,8 +115,9 @@ struct CategoryView: View {
             }
 
         
-    }
 
+        
+    }
     
 }
 

@@ -29,6 +29,8 @@ class apiCall {
     func getProductDetails(productId: String,
                            locationId: String,
                            completion:@escaping (ProductDetailsResponse) -> ()) {
+        print("In getProductDetails")
+        
         guard let url = URL(string: "\(baseURL)/rest/products/\(productId)?locationId=\(locationId)") else { return }
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in
@@ -66,7 +68,7 @@ class apiCall {
                          productId: String,
                          quantity: Int,
                          completion:@escaping (BasketResponse) -> ()) {
-        
+        print("In addItemToBasket")
         
         guard let url = URL(string: "\(baseURL)/rest/baskets/PRIMARY/items?returnBasket=true") else { return }
         
@@ -92,6 +94,28 @@ class apiCall {
         }
         .resume()
         
+    }
+    
+    func removeItemFromBasket(customerId: String,
+                              lineNumber: Int,
+                              completion:@escaping () -> ()) {
+        
+             print("In removeItemFromBasket")
+             
+             guard let url = URL(string: "\(baseURL)/rest/baskets/PRIMARY/items/\(lineNumber)") else { return }
+             
+             var request = URLRequest(url: url)
+                 request.httpMethod = "DELETE"
+                 request.setValue(customerId, forHTTPHeaderField: "subject")
+             
+            URLSession.shared.dataTask(with: request) { (data, _, _) in
+                
+                DispatchQueue.main.async {
+                    completion()
+                }
+            }
+            .resume()
+             
     }
     
     func deleteBasket(customerId: String,

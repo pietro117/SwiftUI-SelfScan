@@ -22,7 +22,8 @@ struct BasketList: View {
         List(transactionResponse.transaction!.basket.items.filter { $0.itemType != "orderDetailsItem"} , id: \.lineNumber) { basketItem in
 
                 BasketRow(basketItem: basketItem,
-                showExtraDetails: false)
+                showExtraDetails: false,
+                isDeleted: false)
             
             }
             

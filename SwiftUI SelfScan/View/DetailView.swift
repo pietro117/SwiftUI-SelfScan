@@ -16,6 +16,7 @@ struct DetailView: View {
     
     @State var loadContent = false
     @State var quantityEntered: String = "1"
+    @State private var shouldShowMessageLabel = false
     
     var body: some View {
         
@@ -144,7 +145,23 @@ struct DetailView: View {
                 .frame(width: UIScreen.main.bounds.width - 30, alignment: .leading)
                 .background(Color(red: 230  / 255, green: 255 / 255, blue: 230 / 255))
                 
-                Button(action: {}) {
+                if shouldShowMessageLabel {
+
+                    messageLabel.transition(.asymmetric(insertion: .fadeAndSlide, removal: .fadeAndSlide))
+                    Spacer()
+                }
+                
+                Button(action: {
+                    
+                    //add product to basket
+                    apiCall().addItemToBasket(customerId: "1",
+                                              productId:selectedItem.productId,
+                                              quantity: 1, completion: { _ in })
+                    
+                    self.animateAndDelayWithSeconds(1) { self.shouldShowMessageLabel = true }
+                    self.animateAndDelayWithSeconds(3) { self.shouldShowMessageLabel = false }
+
+                }) {
                     
                     Text("ADD TO BAG")
                         .fontWeight(.bold)
@@ -163,8 +180,31 @@ struct DetailView: View {
                 }
                 
             }
+            
+
         
         }
     }
+    
+    func animateAndDelayWithSeconds(_ seconds: TimeInterval, action: @escaping () -> Void) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            withAnimation {
+                action()
+            }
+        }
+    }
+
+    var messageLabel: some View {
+        HStack {
+            Spacer()
+            Text("Product added to Bag")
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
+            Spacer()
+        }
+        .frame(height: 44.0)
+        .background(Color.red)
+    }
+    
 }
 

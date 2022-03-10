@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 struct ProductDetailsItem: Codable, Identifiable {
     let id = UUID()
     var productId: String = ""
