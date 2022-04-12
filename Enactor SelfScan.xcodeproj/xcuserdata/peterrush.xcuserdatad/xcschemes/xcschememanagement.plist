@@ -4,10 +4,28 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>SwiftUI SelfScan.xcscheme_^#shared#^_</key>
+		<key>Enactor SelfScan.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>60BF7D812746472400A7E60B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>60BF7D922746472500A7E60B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>60BF7D9D2746472500A7E60B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

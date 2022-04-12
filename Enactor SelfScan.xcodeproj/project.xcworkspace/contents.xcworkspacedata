@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/peterrush/Development/XCode/custom-shop/SwiftUI SelfScan/Enactor SelfScan.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

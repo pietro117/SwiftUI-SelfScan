@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		602B37AC2805456000B28925 /* api_preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 602B37AB2805456000B28925 /* api_preferences.plist */; };
-		602C8BB8274EA836005D2A0D /* ExampleBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = 602C8BB7274EA836005D2A0D /* ExampleBasket.json */; };
 		602C8BBA274EA86C005D2A0D /* APIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602C8BB9274EA86C005D2A0D /* APIData.swift */; };
 		602C8BBC274EA92A005D2A0D /* BasketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602C8BBB274EA92A005D2A0D /* BasketRow.swift */; };
 		602C8BC0274EAE85005D2A0D /* BasketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602C8BBF274EAE85005D2A0D /* BasketList.swift */; };
 		6042BAEE27FF108500385E4C /* APIPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6042BAED27FF108500385E4C /* APIPreferences.swift */; };
+		60448CD02805CFD200528961 /* barcode_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 60448CCF2805CFD200528961 /* barcode_ipad.png */; };
+		60448CD62805D11300528961 /* barcode_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 60448CD52805D11300528961 /* barcode_1024.png */; };
 		607882442747CFDE006D962F /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607882432747CFDE006D962F /* CategoryView.swift */; };
 		6078824E2747CFF9006D962F /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6078824D2747CFF9006D962F /* BasketView.swift */; };
 		607882692747D225006D962F /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607882682747D225006D962F /* MenuCategory.swift */; };
@@ -32,6 +33,7 @@
 		60BF7DD82746952600A7E60B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BF7DD72746952600A7E60B /* DetailView.swift */; };
 		60BF7DE52746B1FC00A7E60B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BF7DE42746B1FC00A7E60B /* Utils.swift */; };
 		60BF7DEB2746E99D00A7E60B /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BF7DEA2746E99D00A7E60B /* ProductDetails.swift */; };
+		60EB23752805CAEA005C2A15 /* ExampleBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = 60EB23742805CAEA005C2A15 /* ExampleBasket.json */; };
 		60F9B0A02755135F0064B426 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F9B09F2755135F0064B426 /* Transaction.swift */; };
 		60FA6D9C274F845400B303D7 /* APICalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FA6D9B274F845400B303D7 /* APICalls.swift */; };
 		60FA6D9E274FE38300B303D7 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FA6D9D274FE38300B303D7 /* CheckoutView.swift */; };
@@ -57,26 +59,27 @@
 
 /* Begin PBXFileReference section */
 		602B37AB2805456000B28925 /* api_preferences.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = api_preferences.plist; sourceTree = "<group>"; };
-		602C8BB7274EA836005D2A0D /* ExampleBasket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ExampleBasket.json; path = "SwiftUI SelfScan/Resources/ExampleBasket.json"; sourceTree = SOURCE_ROOT; };
 		602C8BB9274EA86C005D2A0D /* APIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIData.swift; sourceTree = "<group>"; };
 		602C8BBB274EA92A005D2A0D /* BasketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRow.swift; sourceTree = "<group>"; };
 		602C8BBF274EAE85005D2A0D /* BasketList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketList.swift; sourceTree = "<group>"; };
 		6042BAED27FF108500385E4C /* APIPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPreferences.swift; sourceTree = "<group>"; };
+		60448CCF2805CFD200528961 /* barcode_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode_ipad.png; sourceTree = "<group>"; };
+		60448CD52805D11300528961 /* barcode_1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode_1024.png; sourceTree = "<group>"; };
 		607882432747CFDE006D962F /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		6078824D2747CFF9006D962F /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
 		607882682747D225006D962F /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
 		607882702747FCDC006D962F /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		60BB2FE62805C75800C830C5 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode.png; sourceTree = "<group>"; };
-		60BF7D822746472400A7E60B /* SwiftUI SelfScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI SelfScan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60BF7D822746472400A7E60B /* Enactor SelfScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Enactor SelfScan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60BF7D852746472400A7E60B /* SwiftUI_SelfScanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_SelfScanApp.swift; sourceTree = "<group>"; };
 		60BF7D872746472400A7E60B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		60BF7D892746472400A7E60B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60BF7D8C2746472400A7E60B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		60BF7D8E2746472400A7E60B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		60BF7D932746472500A7E60B /* SwiftUI SelfScanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI SelfScanTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60BF7D932746472500A7E60B /* Enactor SelfScanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Enactor SelfScanTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60BF7D972746472500A7E60B /* SwiftUI_SelfScanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_SelfScanTests.swift; sourceTree = "<group>"; };
 		60BF7D992746472500A7E60B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		60BF7D9E2746472500A7E60B /* SwiftUI SelfScanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI SelfScanUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60BF7D9E2746472500A7E60B /* Enactor SelfScanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Enactor SelfScanUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60BF7DA22746472500A7E60B /* SwiftUI_SelfScanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_SelfScanUITests.swift; sourceTree = "<group>"; };
 		60BF7DA42746472500A7E60B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60BF7DB5274647FD00A7E60B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 		60BF7DD72746952600A7E60B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		60BF7DE42746B1FC00A7E60B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		60BF7DEA2746E99D00A7E60B /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
+		60EB23742805CAEA005C2A15 /* ExampleBasket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ExampleBasket.json; sourceTree = "<group>"; };
 		60F9B09F2755135F0064B426 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		60FA6D9B274F845400B303D7 /* APICalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICalls.swift; sourceTree = "<group>"; };
 		60FA6D9D274FE38300B303D7 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
@@ -121,7 +125,7 @@
 		602C8BB6274EA81A005D2A0D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				602C8BB7274EA836005D2A0D /* ExampleBasket.json */,
+				60EB23742805CAEA005C2A15 /* ExampleBasket.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -129,9 +133,9 @@
 		60BF7D792746472400A7E60B = {
 			isa = PBXGroup;
 			children = (
-				60BF7D842746472400A7E60B /* SwiftUI SelfScan */,
-				60BF7D962746472500A7E60B /* SwiftUI SelfScanTests */,
-				60BF7DA12746472500A7E60B /* SwiftUI SelfScanUITests */,
+				60BF7D842746472400A7E60B /* Enactor SelfScan */,
+				60BF7D962746472500A7E60B /* Enactor SelfScanTests */,
+				60BF7DA12746472500A7E60B /* Enactor SelfScanUITests */,
 				60BF7D832746472400A7E60B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -139,14 +143,14 @@
 		60BF7D832746472400A7E60B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				60BF7D822746472400A7E60B /* SwiftUI SelfScan.app */,
-				60BF7D932746472500A7E60B /* SwiftUI SelfScanTests.xctest */,
-				60BF7D9E2746472500A7E60B /* SwiftUI SelfScanUITests.xctest */,
+				60BF7D822746472400A7E60B /* Enactor SelfScan.app */,
+				60BF7D932746472500A7E60B /* Enactor SelfScanTests.xctest */,
+				60BF7D9E2746472500A7E60B /* Enactor SelfScanUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		60BF7D842746472400A7E60B /* SwiftUI SelfScan */ = {
+		60BF7D842746472400A7E60B /* Enactor SelfScan */ = {
 			isa = PBXGroup;
 			children = (
 				602C8BB6274EA81A005D2A0D /* Resources */,
@@ -157,10 +161,12 @@
 				60BF7D892746472400A7E60B /* Assets.xcassets */,
 				60BF7D8E2746472400A7E60B /* Info.plist */,
 				60BB2FE62805C75800C830C5 /* barcode.png */,
+				60448CCF2805CFD200528961 /* barcode_ipad.png */,
+				60448CD52805D11300528961 /* barcode_1024.png */,
 				60BF7D8B2746472400A7E60B /* Preview Content */,
 				602B37AB2805456000B28925 /* api_preferences.plist */,
 			);
-			path = "SwiftUI SelfScan";
+			path = "Enactor SelfScan";
 			sourceTree = "<group>";
 		};
 		60BF7D8B2746472400A7E60B /* Preview Content */ = {
@@ -171,22 +177,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		60BF7D962746472500A7E60B /* SwiftUI SelfScanTests */ = {
+		60BF7D962746472500A7E60B /* Enactor SelfScanTests */ = {
 			isa = PBXGroup;
 			children = (
 				60BF7D972746472500A7E60B /* SwiftUI_SelfScanTests.swift */,
 				60BF7D992746472500A7E60B /* Info.plist */,
 			);
-			path = "SwiftUI SelfScanTests";
+			path = "Enactor SelfScanTests";
 			sourceTree = "<group>";
 		};
-		60BF7DA12746472500A7E60B /* SwiftUI SelfScanUITests */ = {
+		60BF7DA12746472500A7E60B /* Enactor SelfScanUITests */ = {
 			isa = PBXGroup;
 			children = (
 				60BF7DA22746472500A7E60B /* SwiftUI_SelfScanUITests.swift */,
 				60BF7DA42746472500A7E60B /* Info.plist */,
 			);
-			path = "SwiftUI SelfScanUITests";
+			path = "Enactor SelfScanUITests";
 			sourceTree = "<group>";
 		};
 		60BF7DB3274647E000A7E60B /* Model */ = {
@@ -233,9 +239,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		60BF7D812746472400A7E60B /* SwiftUI SelfScan */ = {
+		60BF7D812746472400A7E60B /* Enactor SelfScan */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 60BF7DA72746472500A7E60B /* Build configuration list for PBXNativeTarget "SwiftUI SelfScan" */;
+			buildConfigurationList = 60BF7DA72746472500A7E60B /* Build configuration list for PBXNativeTarget "Enactor SelfScan" */;
 			buildPhases = (
 				60BF7D7E2746472400A7E60B /* Sources */,
 				60BF7D7F2746472400A7E60B /* Frameworks */,
@@ -245,17 +251,17 @@
 			);
 			dependencies = (
 			);
-			name = "SwiftUI SelfScan";
+			name = "Enactor SelfScan";
 			packageProductDependencies = (
 				60B82285274B99FA00D48E9F /* CodeScanner */,
 			);
 			productName = "SwiftUI SelfScan";
-			productReference = 60BF7D822746472400A7E60B /* SwiftUI SelfScan.app */;
+			productReference = 60BF7D822746472400A7E60B /* Enactor SelfScan.app */;
 			productType = "com.apple.product-type.application";
 		};
-		60BF7D922746472500A7E60B /* SwiftUI SelfScanTests */ = {
+		60BF7D922746472500A7E60B /* Enactor SelfScanTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 60BF7DAA2746472500A7E60B /* Build configuration list for PBXNativeTarget "SwiftUI SelfScanTests" */;
+			buildConfigurationList = 60BF7DAA2746472500A7E60B /* Build configuration list for PBXNativeTarget "Enactor SelfScanTests" */;
 			buildPhases = (
 				60BF7D8F2746472500A7E60B /* Sources */,
 				60BF7D902746472500A7E60B /* Frameworks */,
@@ -266,14 +272,14 @@
 			dependencies = (
 				60BF7D952746472500A7E60B /* PBXTargetDependency */,
 			);
-			name = "SwiftUI SelfScanTests";
+			name = "Enactor SelfScanTests";
 			productName = "SwiftUI SelfScanTests";
-			productReference = 60BF7D932746472500A7E60B /* SwiftUI SelfScanTests.xctest */;
+			productReference = 60BF7D932746472500A7E60B /* Enactor SelfScanTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		60BF7D9D2746472500A7E60B /* SwiftUI SelfScanUITests */ = {
+		60BF7D9D2746472500A7E60B /* Enactor SelfScanUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 60BF7DAD2746472500A7E60B /* Build configuration list for PBXNativeTarget "SwiftUI SelfScanUITests" */;
+			buildConfigurationList = 60BF7DAD2746472500A7E60B /* Build configuration list for PBXNativeTarget "Enactor SelfScanUITests" */;
 			buildPhases = (
 				60BF7D9A2746472500A7E60B /* Sources */,
 				60BF7D9B2746472500A7E60B /* Frameworks */,
@@ -284,9 +290,9 @@
 			dependencies = (
 				60BF7DA02746472500A7E60B /* PBXTargetDependency */,
 			);
-			name = "SwiftUI SelfScanUITests";
+			name = "Enactor SelfScanUITests";
 			productName = "SwiftUI SelfScanUITests";
-			productReference = 60BF7D9E2746472500A7E60B /* SwiftUI SelfScanUITests.xctest */;
+			productReference = 60BF7D9E2746472500A7E60B /* Enactor SelfScanUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -328,9 +334,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				60BF7D812746472400A7E60B /* SwiftUI SelfScan */,
-				60BF7D922746472500A7E60B /* SwiftUI SelfScanTests */,
-				60BF7D9D2746472500A7E60B /* SwiftUI SelfScanUITests */,
+				60BF7D812746472400A7E60B /* Enactor SelfScan */,
+				60BF7D922746472500A7E60B /* Enactor SelfScanTests */,
+				60BF7D9D2746472500A7E60B /* Enactor SelfScanUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -340,10 +346,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60448CD02805CFD200528961 /* barcode_ipad.png in Resources */,
 				60BF7D8D2746472400A7E60B /* Preview Assets.xcassets in Resources */,
-				602C8BB8274EA836005D2A0D /* ExampleBasket.json in Resources */,
+				60448CD62805D11300528961 /* barcode_1024.png in Resources */,
 				60BB2FE72805C75800C830C5 /* barcode.png in Resources */,
 				602B37AC2805456000B28925 /* api_preferences.plist in Resources */,
+				60EB23752805CAEA005C2A15 /* ExampleBasket.json in Resources */,
 				60BF7D8A2746472400A7E60B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,12 +422,12 @@
 /* Begin PBXTargetDependency section */
 		60BF7D952746472500A7E60B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 60BF7D812746472400A7E60B /* SwiftUI SelfScan */;
+			target = 60BF7D812746472400A7E60B /* Enactor SelfScan */;
 			targetProxy = 60BF7D942746472500A7E60B /* PBXContainerItemProxy */;
 		};
 		60BF7DA02746472500A7E60B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 60BF7D812746472400A7E60B /* SwiftUI SelfScan */;
+			target = 60BF7D812746472400A7E60B /* Enactor SelfScan */;
 			targetProxy = 60BF7D9F2746472500A7E60B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -550,16 +558,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI SelfScan/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_ASSET_PATHS = "\"Enactor SelfScan/Preview Content\"";
 				DEVELOPMENT_TEAM = YP97YH347J;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "SwiftUI SelfScan/Info.plist";
+				INFOPLIST_FILE = "Enactor SelfScan/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.enactor.presales.SwiftUI-SelfScan";
+				PRODUCT_BUNDLE_IDENTIFIER = com.enactor.presales.selfScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -574,16 +583,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI SelfScan/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_ASSET_PATHS = "\"Enactor SelfScan/Preview Content\"";
 				DEVELOPMENT_TEAM = YP97YH347J;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "SwiftUI SelfScan/Info.plist";
+				INFOPLIST_FILE = "Enactor SelfScan/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.enactor.presales.SwiftUI-SelfScan";
+				PRODUCT_BUNDLE_IDENTIFIER = com.enactor.presales.selfScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -687,7 +697,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		60BF7DA72746472500A7E60B /* Build configuration list for PBXNativeTarget "SwiftUI SelfScan" */ = {
+		60BF7DA72746472500A7E60B /* Build configuration list for PBXNativeTarget "Enactor SelfScan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60BF7DA82746472500A7E60B /* Debug */,
@@ -696,7 +706,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		60BF7DAA2746472500A7E60B /* Build configuration list for PBXNativeTarget "SwiftUI SelfScanTests" */ = {
+		60BF7DAA2746472500A7E60B /* Build configuration list for PBXNativeTarget "Enactor SelfScanTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60BF7DAB2746472500A7E60B /* Debug */,
@@ -705,7 +715,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		60BF7DAD2746472500A7E60B /* Build configuration list for PBXNativeTarget "SwiftUI SelfScanUITests" */ = {
+		60BF7DAD2746472500A7E60B /* Build configuration list for PBXNativeTarget "Enactor SelfScanUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60BF7DAE2746472500A7E60B /* Debug */,
