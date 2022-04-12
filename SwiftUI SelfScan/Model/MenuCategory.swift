@@ -17,11 +17,10 @@ struct MenuCategory: Identifiable, Equatable {
 
 let menuCategories: [MenuCategory] = [
 
-    MenuCategory(categoryCode: "GROC_BAKE",title: "Bakery"),
-    MenuCategory(categoryCode: "GROC_CHILL",title: "Chilled"),
-    MenuCategory(categoryCode: "GROC_DRINK",title: "Drinks"),
-    MenuCategory(categoryCode: "GROC_HABA",title: "Beauty"),
-    MenuCategory(categoryCode: "GROC_PRD",title: "Produce")
+    MenuCategory(categoryCode: "groc_bake",title: "Bakery"),
+    MenuCategory(categoryCode: "groc_prd",title: "Produce"),
+    MenuCategory(categoryCode: "groc_chill",title: "Chilled"),
+    MenuCategory(categoryCode: "groc_drink",title: "Drinks"),
+    MenuCategory(categoryCode: "groc_haba",title: "Beauty")
     
 ]
-

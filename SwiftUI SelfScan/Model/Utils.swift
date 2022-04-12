@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+
+
 class Utils {
 
     public let currencyFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
-        formatter.locale = Locale.current
+        //formatter.locale = Locale.current
+        formatter.locale = Locale(identifier: locale)
         formatter.numberStyle = .currency
         return formatter
     }()
@@ -19,7 +22,7 @@ class Utils {
     func getDisplayPrice(price: Int) -> String   {
     
         let currPrice = Double(price)/100 //TODO: improve this
-        guard let displayPrice = currencyFormatter.string(for: currPrice) else { return "£0.00" }
+        guard let displayPrice = currencyFormatter.string(for: currPrice) else { return currencyFormatter.string(for: 0)! }
         return displayPrice
     
     }
@@ -46,7 +49,8 @@ extension Image {
     func data(url:URL) -> Self {
         
         let urlString = url.absoluteString
-        let corrUrl = URL(string: urlString.replacingOccurrences(of: "image://", with: "http://52.157.215.89:39832/WebRetailProcessing/images?resource="))
+        let imageBaseURL = "\(procBaseURL)/images?resource="
+        let corrUrl = URL(string: urlString.replacingOccurrences(of: "image://", with: imageBaseURL))
 
         if let data = try? Data(contentsOf: corrUrl!) {
 

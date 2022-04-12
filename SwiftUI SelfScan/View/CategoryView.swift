@@ -90,7 +90,7 @@ struct CategoryView: View {
                                 .onTapGesture {
                                     withAnimation(.spring()){
                                         
-                                        apiCall().getProductDetails(productId: productDetail.productId, locationId: "0001") { (productDetailsResponse) in
+                                        apiCall().getProductDetails(productId: productDetail.productId, locationId: locationId) { (productDetailsResponse) in
                                             selectedItem = productDetailsResponse.productDetail
                                         
                                         show.toggle()

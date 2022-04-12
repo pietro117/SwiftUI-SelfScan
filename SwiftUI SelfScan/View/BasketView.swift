@@ -72,40 +72,39 @@ struct BasketView: View {
                 
             }
             
-            if self.transactionResponse.transaction!.basket.items.count > 0 {
+            if self.transactionResponse.transaction != nil {
+                
+                if self.transactionResponse.transaction!.basket.items.count > 0 {
             
-                BasketList(transactionResponse: self.$transactionResponse)
-                    .onAppear() {
-                        
-                        apiCall().getTransaction(customerId: customerId) { (transactionResponse) in
-                            self.transactionResponse = transactionResponse
-                            
-                        }
-                    
-                    }
-            }
-            Spacer()
-            //Promo Details
-            if self.transactionResponse.transaction!.basket.promotionCalculation != nil {
-                VStack{
-                    
-                    VStack(alignment:.leading, spacing: 8){
-                        
-                        Text("Exclusive Deal")
-                            .fontWeight(.heavy)
-                            .foregroundColor(.black)
-                        
-                        Text(self.transactionResponse.transaction!.basket.promotionCalculation?.itemsArray![0].promotionSavingItem?.promotionDescription ?? "")
-                            .foregroundColor(.gray)
-                        Text("Saving: \(myUtils.getDisplayPrice(price: transactionResponse.transaction!.basket.promotionCalculation?.totalSaving ?? 0))")
-                        }
-                    }
-                    .padding()
-                    .frame(width: UIScreen.main.bounds.width - 30, alignment: .leading)
-                    .background(Color(red: 255  / 255, green: 230 / 255, blue: 230 / 255))
-                    .cornerRadius(15)
+                    BasketList(transactionResponse: self.$transactionResponse)
                 }
+                
                 Spacer()
+                
+                //Promo Details
+                if self.transactionResponse.transaction!.basket.promotionCalculation != nil {
+                    VStack{
+                        
+                        VStack(alignment:.leading, spacing: 8){
+                            
+                            Text("Exclusive Deal")
+                                .fontWeight(.heavy)
+                                .foregroundColor(.black)
+                            
+                            Text(self.transactionResponse.transaction!.basket.promotionCalculation?.itemsArray![0].promotionSavingItem?.promotionDescription ?? "")
+                                .foregroundColor(.gray)
+                            Text("Saving: \(myUtils.getDisplayPrice(price: transactionResponse.transaction!.basket.promotionCalculation?.totalSaving ?? 0))")
+                            }
+                        }
+                        .padding()
+                        .frame(width: UIScreen.main.bounds.width - 30, alignment: .leading)
+                        .background(Color(red: 255  / 255, green: 230 / 255, blue: 230 / 255))
+                        .cornerRadius(15)
+                    }
+                    Spacer()
+
+            }
+            
             
             if self.scannedCode != nil {
                 Text("Scanned code \(self.scannedCode ?? "")")
@@ -157,9 +156,17 @@ struct BasketView: View {
         }
         .sheet(isPresented: $isPresentingScanner) { self.scannerSheet }
         .sheet(isPresented: $isPresentingCheckout) { self.checkoutSheet }
+        .onAppear() {
+            
+            apiCall().getTransaction(customerId: customerId) { (transactionResponse) in
+                self.transactionResponse = transactionResponse
+                
+            }
         
+        }
                 
     }
+    
     
     var scannerSheet : some View {
         
@@ -208,7 +215,7 @@ struct BasketView: View {
             
             //look up product
             apiCall().getProductDetails(productId: details,
-                                        locationId: "0001") { (productDetailsResponse) in
+                                        locationId: locationId) { (productDetailsResponse) in
 
             //add product to basket
             apiCall().addItemToBasket(customerId: customerId,

@@ -1,0 +1,251 @@
+{
+    "basketType": "PRIMARY",
+    "basketDescription": "Primary",
+    "basket": {
+        "items": [
+            {
+                "@type": "orderDetailsItem",
+                "description": "Order",
+                "deviceId": "pos2@0001.enactor",
+                "effectiveNetValue": -5992,
+                "lineNumber": 1,
+                "netValue": -5992,
+                "value": -5992,
+                "dateTimeCreated": "2021-11-24T16:35:45.000+00:00",
+                "userId": "CUST_USER",
+                "type": "VALUE",
+                "orderReference": "16",
+                "sendCustomerDeliveryNotification": true,
+                "customerOrderTypeId": "CUSTOMER_ORDER",
+                "supplementaryValues": {}
+            },
+            {
+                "@type": "merchandiseItem",
+                "mmGroupId": "GROC-DRINK-WINE",
+                "mmGroupHierarchyId": "GROCERY",
+                "localisedWarrantyInformation": {},
+                "mmGroupDescription": "Wines",
+                "mmGroupVariantGroupId": "All",
+                "mmGroupVariantHierarchyId": "All",
+                "description": "Chardonnay Gran Reserva",
+                "deviceId": "pos2@0001.enactor",
+                "effectiveNetValue": 1398,
+                "lineNumber": 2,
+                "netValue": 1398,
+                "value": 1398,
+                "dateTimeCreated": "2021-11-24T16:35:47.000+00:00",
+                "userId": "CUST_USER",
+                "modifiersNetValue": 0,
+                "modifiersEffectiveNetValue": 0,
+                "modifiersVoidQuantity": 0.0,
+                "modifiersQuantity": 0.0,
+                "notDiscountable": false,
+                "maxDiscount": 0.0,
+                "handKeyed": true,
+                "productID": "535024",
+                "quantity": 2.0,
+                "netQuantity": 2.0,
+                "isReturn": false,
+                "unitPrice": 699,
+                "sourceInventoryType": "AVA",
+                "miscProductData": {
+                    "customerAgeRestriction": 18
+                },
+                "orderable": true,
+                "roundedTaxAmount": 233,
+                "priceTypeId": "R",
+                "productTypeId": "merchandiseProduct",
+                "productImageURL": "image://PRODUCT/535024.jpg",
+                "type": "VALUE",
+                "modifiers": [
+                    {
+                        "@type": "orderModifier",
+                        "modifierItemLine": 1
+                    }
+                ],
+                "taxGroupId": {
+                    "taxGroupId": "A",
+                    "id": "A"
+                },
+                "tax": [
+                    {
+                        "@type": "taxAmount",
+                        "taxRateId": "UK_1",
+                        "taxRateKey": {
+                            "taxRateId": "UK_1",
+                            "effectiveDate": 1427155200000
+                        },
+                        "displayTaxCode": "UKS",
+                        "taxAmount": 2330000,
+                        "scale": 4,
+                        "taxRatePercentage": 0.2
+                    }
+                ],
+                "giftReceiptItem": false,
+                "supplementaryValues": {}
+            },
+            {
+                "@type": "merchandiseItem",
+                "mmGroupId": "GROC-DRINK-WINE",
+                "mmGroupHierarchyId": "GROCERY",
+                "localisedWarrantyInformation": {},
+                "mmGroupDescription": "Wines",
+                "mmGroupVariantGroupId": "All",
+                "mmGroupVariantHierarchyId": "All",
+                "description": "Cabernet Sauvignon",
+                "deviceId": "pos2@0001.enactor",
+                "effectiveNetValue": 599,
+                "lineNumber": 3,
+                "netValue": 599,
+                "value": 599,
+                "dateTimeCreated": "2021-11-24T16:35:53.000+00:00",
+                "userId": "CUST_USER",
+                "modifiersNetValue": 0,
+                "modifiersEffectiveNetValue": 0,
+                "modifiersVoidQuantity": 0.0,
+                "modifiersQuantity": 0.0,
+                "notDiscountable": false,
+                "maxDiscount": 0.0,
+                "handKeyed": true,
+                "productID": "535022",
+                "quantity": 1.0,
+                "netQuantity": 1.0,
+                "isReturn": false,
+                "unitPrice": 599,
+                "sourceInventoryType": "AVA",
+                "miscProductData": {
+                    "customerAgeRestriction": 18
+                },
+                "orderable": true,
+                "roundedTaxAmount": 100,
+                "priceTypeId": "R",
+                "productTypeId": "merchandiseProduct",
+                "productImageURL": "image://PRODUCT/535022.jpg",
+                "type": "VALUE",
+                "modifiers": [
+                    {
+                        "@type": "orderModifier",
+                        "modifierItemLine": 1
+                    }
+                ],
+                "taxGroupId": {
+                    "taxGroupId": "A",
+                    "id": "A"
+                },
+                "tax": [
+                    {
+                        "@type": "taxAmount",
+                        "taxRateId": "UK_1",
+                        "taxRateKey": {
+                            "taxRateId": "UK_1",
+                            "effectiveDate": 1427155200000
+                        },
+                        "displayTaxCode": "UKS",
+                        "taxAmount": 998333,
+                        "scale": 4,
+                        "taxRatePercentage": 0.2
+                    }
+                ],
+                "giftReceiptItem": false,
+                "supplementaryValues": {}
+            },
+            {
+                "@type": "merchandiseItem",
+                "mmGroupId": "GROC-DRINK-WINE",
+                "mmGroupHierarchyId": "GROCERY",
+                "localisedWarrantyInformation": {},
+                "mmGroupDescription": "Wines",
+                "mmGroupVariantGroupId": "All",
+                "mmGroupVariantHierarchyId": "All",
+                "description": "Gestos Malbec",
+                "deviceId": "pos2@0001.enactor",
+                "effectiveNetValue": 3995,
+                "lineNumber": 4,
+                "netValue": 3995,
+                "value": 3995,
+                "dateTimeCreated": "2021-11-24T16:35:59.000+00:00",
+                "userId": "CUST_USER",
+                "modifiersNetValue": 0,
+                "modifiersEffectiveNetValue": 0,
+                "modifiersVoidQuantity": 0.0,
+                "modifiersQuantity": 0.0,
+                "notDiscountable": false,
+                "maxDiscount": 0.0,
+                "handKeyed": true,
+                "productID": "535023",
+                "quantity": 5.0,
+                "netQuantity": 5.0,
+                "isReturn": false,
+                "unitPrice": 799,
+                "sourceInventoryType": "AVA",
+                "miscProductData": {
+                    "customerAgeRestriction": 18
+                },
+                "orderable": true,
+                "roundedTaxAmount": 666,
+                "priceTypeId": "R",
+                "productTypeId": "merchandiseProduct",
+                "productImageURL": "image://PRODUCT/535023.jpg",
+                "type": "VALUE",
+                "modifiers": [
+                    {
+                        "@type": "orderModifier",
+                        "modifierItemLine": 1
+                    }
+                ],
+                "taxGroupId": {
+                    "taxGroupId": "A",
+                    "id": "A"
+                },
+                "tax": [
+                    {
+                        "@type": "taxAmount",
+                        "taxRateId": "UK_1",
+                        "taxRateKey": {
+                            "taxRateId": "UK_1",
+                            "effectiveDate": 1427155200000
+                        },
+                        "displayTaxCode": "UKS",
+                        "taxAmount": 6658333,
+                        "scale": 4,
+                        "taxRatePercentage": 0.2
+                    }
+                ],
+                "giftReceiptItem": false,
+                "supplementaryValues": {}
+            }
+        ],
+        "balance": 0,
+        "currencyId": "GBP",
+        "currencyDescription": "Pounds Sterling",
+        "taxInclusive": true,
+        "taxSchemeId": "UK",
+        "itemCount": 4,
+        "saleItemQuantity": 8.0,
+        "returnItemQuantity": 0.0,
+        "returnMerchandiseItemQuantity": 0.0,
+        "returnMerchandiseItemNetValue": 0,
+        "saleItemNetValue": 5992,
+        "returnItemNetValue": 0,
+        "merchandiseItemQuantity": 8.0,
+        "merchandiseItemValue": 5992,
+        "total": 0,
+        "grossTotal": 0,
+        "taxTotal": 999,
+        "taxRateSummary": [
+            {
+                "taxRateId": "UK_1",
+                "displayTaxCode": "UKS",
+                "netValue": 4993,
+                "taxValue": 999,
+                "grossValue": 5992,
+                "taxRatePercentage": 0.2
+            }
+        ],
+        "currentModifierLineNumber": 1,
+        "totalTaxAdjustment": 0,
+        "preAuthBalance": 0,
+        "effectiveSaleValue": 5992
+    },
+    "basketResponseCode": "BASKET_ITEM_ADDED"
+}

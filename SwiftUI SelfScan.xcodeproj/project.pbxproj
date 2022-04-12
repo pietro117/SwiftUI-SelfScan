@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		602B37AC2805456000B28925 /* api_preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 602B37AB2805456000B28925 /* api_preferences.plist */; };
 		602C8BB8274EA836005D2A0D /* ExampleBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = 602C8BB7274EA836005D2A0D /* ExampleBasket.json */; };
 		602C8BBA274EA86C005D2A0D /* APIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602C8BB9274EA86C005D2A0D /* APIData.swift */; };
 		602C8BBC274EA92A005D2A0D /* BasketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602C8BBB274EA92A005D2A0D /* BasketRow.swift */; };
 		602C8BC0274EAE85005D2A0D /* BasketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602C8BBF274EAE85005D2A0D /* BasketList.swift */; };
+		6042BAEE27FF108500385E4C /* APIPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6042BAED27FF108500385E4C /* APIPreferences.swift */; };
 		607882442747CFDE006D962F /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607882432747CFDE006D962F /* CategoryView.swift */; };
 		6078824E2747CFF9006D962F /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6078824D2747CFF9006D962F /* BasketView.swift */; };
 		607882692747D225006D962F /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607882682747D225006D962F /* MenuCategory.swift */; };
@@ -53,10 +55,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		602B37AB2805456000B28925 /* api_preferences.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = api_preferences.plist; sourceTree = "<group>"; };
 		602C8BB7274EA836005D2A0D /* ExampleBasket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ExampleBasket.json; path = "SwiftUI SelfScan/Resources/ExampleBasket.json"; sourceTree = SOURCE_ROOT; };
 		602C8BB9274EA86C005D2A0D /* APIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIData.swift; sourceTree = "<group>"; };
 		602C8BBB274EA92A005D2A0D /* BasketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRow.swift; sourceTree = "<group>"; };
 		602C8BBF274EAE85005D2A0D /* BasketList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketList.swift; sourceTree = "<group>"; };
+		6042BAED27FF108500385E4C /* APIPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPreferences.swift; sourceTree = "<group>"; };
 		607882432747CFDE006D962F /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		6078824D2747CFF9006D962F /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
 		607882682747D225006D962F /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 				60BF7D892746472400A7E60B /* Assets.xcassets */,
 				60BF7D8E2746472400A7E60B /* Info.plist */,
 				60BF7D8B2746472400A7E60B /* Preview Content */,
+				602B37AB2805456000B28925 /* api_preferences.plist */,
 			);
 			path = "SwiftUI SelfScan";
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				60BF7DCA27465CAB00A7E60B /* Item.swift */,
 				607882682747D225006D962F /* MenuCategory.swift */,
 				60BF7DE42746B1FC00A7E60B /* Utils.swift */,
+				6042BAED27FF108500385E4C /* APIPreferences.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,6 +339,7 @@
 			files = (
 				60BF7D8D2746472400A7E60B /* Preview Assets.xcassets in Resources */,
 				602C8BB8274EA836005D2A0D /* ExampleBasket.json in Resources */,
+				602B37AC2805456000B28925 /* api_preferences.plist in Resources */,
 				60BF7D8A2746472400A7E60B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +367,7 @@
 			files = (
 				60BF7DEB2746E99D00A7E60B /* ProductDetails.swift in Sources */,
 				60BF7DCB27465CAB00A7E60B /* Item.swift in Sources */,
+				6042BAEE27FF108500385E4C /* APIPreferences.swift in Sources */,
 				6078824E2747CFF9006D962F /* BasketView.swift in Sources */,
 				60FA6D9E274FE38300B303D7 /* CheckoutView.swift in Sources */,
 				602C8BBA274EA86C005D2A0D /* APIData.swift in Sources */,

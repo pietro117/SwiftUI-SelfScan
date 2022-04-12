@@ -7,8 +7,14 @@
 
 import Foundation
 
-let baseURL: String = "http://52.157.215.89:39833/WebRestApi"
+//let baseURL: String = "http://18.134.170.76:39833/WebRestApi"
 
+var preferences = APIPreferencesLoader.load()
+let baseURL: String = preferences.baseURL
+let procBaseURL: String = preferences.procBaseURL
+let locale: String = preferences.locale
+let customerId: String = preferences.customerId
+let locationId: String = preferences.locationId
 
 class apiCall {
     func getProductSearchResponse(categoryId:String,

@@ -48,9 +48,13 @@ struct Home: View {
                             .tabItem {Label("Browse", systemImage: "list.dash")}
                             .tag(1)
 
-                        AccountView()
-                            .tabItem {Label("Account", systemImage: "person.crop.circle")}
-                            .tag(3)
+                        if #available(iOS 15.0, *) {
+                            AccountView()
+                                .tabItem {Label("Account", systemImage: "person.crop.circle")}
+                                .tag(3)
+                        } else {
+                            // Fallback on earlier versions
+                        }
             
                         BasketView()
                             .tabItem {Label("Bag", systemImage: "bag")}

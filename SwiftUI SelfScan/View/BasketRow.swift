@@ -35,6 +35,8 @@ struct BasketRow: View {
                         .fontWeight(.heavy)
                     Spacer()
                     }
+                    
+                    
                     HStack{
                         Text("Qty: \(myUtils.getIntFormat(value: basketItem.quantity ?? 0))")
                         Spacer()
