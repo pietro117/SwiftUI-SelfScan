@@ -176,7 +176,11 @@ struct BasketView: View {
                 simulatedData: "535024",
                 completion: self.handleScan
             )
-            Image("viewfinder")
+            #if targetEnvironment(simulator)
+              // Dont show viewfinder
+            #else
+                Image("viewfinder")
+            #endif
             
         }
     }
@@ -221,6 +225,12 @@ struct BasketView: View {
             apiCall().addItemToBasket(customerId: customerId,
                                       productId:productDetailsResponse.productDetail.productId,
                                       quantity: 1) { (basketResponse) in
+                
+                if self.transactionResponse.transaction == nil {
+                    
+                    self.transactionResponse.transaction = Transaction()
+                    
+                }
 
                 self.transactionResponse.transaction!.basket = basketResponse.basket!
             }

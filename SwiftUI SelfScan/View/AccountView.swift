@@ -23,10 +23,11 @@ struct AccountView: View {
     
     var body: some View {
         VStack{
-            VStack {
+            VStack (alignment: .leading) {
                 
                 Text("Customer Id")
                     .fontWeight(.bold)
+                    
                 TextField("Customer ID", text: $preferences.customerId)
                     .focused($focusedField, equals: .customerId)
                 Text("API Base URL")
