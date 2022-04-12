@@ -29,7 +29,6 @@ class APIPreferencesLoader {
       else {
         copyPreferencesFromBundle()
         return load()
-        // return APIPreferences(customerId: "", baseURL: "", procBaseURL: "", locale: "") }
     }
     return preferences
   }
@@ -40,8 +39,7 @@ class APIPreferencesLoader {
       if let path = Bundle.main.path(forResource: "api_preferences", ofType: "plist"),
         let data = FileManager.default.contents(atPath: path),
         FileManager.default.fileExists(atPath: plistURL.path) == false {
-
-        FileManager.default.createFile(atPath: plistURL.path, contents: data, attributes: nil)
+          FileManager.default.createFile(atPath: plistURL.path, contents: data, attributes: nil)
       }
     }
     
@@ -53,7 +51,8 @@ class APIPreferencesLoader {
           // Update an existing plist
           try? data.write(to: plistURL)
         } else {
-          // Create a new plist
+            // Create a new plist
+            // Shouldnt happen
           FileManager.default.createFile(atPath: plistURL.path, contents: data, attributes: nil)
         }
       }

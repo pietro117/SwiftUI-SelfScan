@@ -18,6 +18,7 @@
 		607882692747D225006D962F /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607882682747D225006D962F /* MenuCategory.swift */; };
 		607882712747FCDC006D962F /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607882702747FCDC006D962F /* AccountView.swift */; };
 		60B82286274B99FA00D48E9F /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 60B82285274B99FA00D48E9F /* CodeScanner */; };
+		60BB2FE72805C75800C830C5 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 60BB2FE62805C75800C830C5 /* barcode.png */; };
 		60BF7D862746472400A7E60B /* SwiftUI_SelfScanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BF7D852746472400A7E60B /* SwiftUI_SelfScanApp.swift */; };
 		60BF7D882746472400A7E60B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BF7D872746472400A7E60B /* ContentView.swift */; };
 		60BF7D8A2746472400A7E60B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60BF7D892746472400A7E60B /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		6078824D2747CFF9006D962F /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
 		607882682747D225006D962F /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
 		607882702747FCDC006D962F /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		60BB2FE62805C75800C830C5 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode.png; sourceTree = "<group>"; };
 		60BF7D822746472400A7E60B /* SwiftUI SelfScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI SelfScan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60BF7D852746472400A7E60B /* SwiftUI_SelfScanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_SelfScanApp.swift; sourceTree = "<group>"; };
 		60BF7D872746472400A7E60B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				60BF7D872746472400A7E60B /* ContentView.swift */,
 				60BF7D892746472400A7E60B /* Assets.xcassets */,
 				60BF7D8E2746472400A7E60B /* Info.plist */,
+				60BB2FE62805C75800C830C5 /* barcode.png */,
 				60BF7D8B2746472400A7E60B /* Preview Content */,
 				602B37AB2805456000B28925 /* api_preferences.plist */,
 			);
@@ -308,7 +311,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 60BF7D7D2746472400A7E60B /* Build configuration list for PBXProject "SwiftUI SelfScan" */;
+			buildConfigurationList = 60BF7D7D2746472400A7E60B /* Build configuration list for PBXProject "Enactor SelfScan" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -339,6 +342,7 @@
 			files = (
 				60BF7D8D2746472400A7E60B /* Preview Assets.xcassets in Resources */,
 				602C8BB8274EA836005D2A0D /* ExampleBasket.json in Resources */,
+				60BB2FE72805C75800C830C5 /* barcode.png in Resources */,
 				602B37AC2805456000B28925 /* api_preferences.plist in Resources */,
 				60BF7D8A2746472400A7E60B /* Assets.xcassets in Resources */,
 			);
@@ -544,9 +548,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI SelfScan/Preview Content\"";
-				DEVELOPMENT_TEAM = L82FN5B46P;
+				DEVELOPMENT_TEAM = YP97YH347J;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SwiftUI SelfScan/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -554,8 +559,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.enactor.SwiftUI-SelfScan";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enactor.presales.SwiftUI-SelfScan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -566,9 +572,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI SelfScan/Preview Content\"";
-				DEVELOPMENT_TEAM = L82FN5B46P;
+				DEVELOPMENT_TEAM = YP97YH347J;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SwiftUI SelfScan/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -576,8 +583,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.enactor.SwiftUI-SelfScan";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enactor.presales.SwiftUI-SelfScan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -670,7 +678,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		60BF7D7D2746472400A7E60B /* Build configuration list for PBXProject "SwiftUI SelfScan" */ = {
+		60BF7D7D2746472400A7E60B /* Build configuration list for PBXProject "Enactor SelfScan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60BF7DA52746472500A7E60B /* Debug */,
