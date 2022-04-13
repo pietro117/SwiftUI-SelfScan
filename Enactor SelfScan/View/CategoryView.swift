@@ -91,7 +91,7 @@ struct CategoryView: View {
                                     withAnimation(.spring()){
                                         
                                         apiCall().getProductDetails(productId: productDetail.productId, locationId: locationId) { (productDetailsResponse) in
-                                            selectedItem = productDetailsResponse.productDetail
+                                            selectedItem = productDetailsResponse.productDetail!
                                         
                                         show.toggle()
                                     }

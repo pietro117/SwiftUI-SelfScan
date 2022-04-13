@@ -14,6 +14,7 @@ struct BasketView: View {
     @State var isPresentingCheckout = false
     @State var scannedCode: String?
     @State var customerId: String = "1"
+    @State private var scanMessage = ""
     
     @State var transactionResponse: TransactionResponse = TransactionResponse()
     
@@ -108,6 +109,10 @@ struct BasketView: View {
             
             if self.scannedCode != nil {
                 Text("Scanned code \(self.scannedCode ?? "")")
+            } else if self.scanMessage != "" {
+                Text(self.scanMessage)
+                    .fontWeight(.bold)
+                    .foregroundColor(.red)
             }
             HStack {
                 if self.transactionResponse.transaction != nil {
@@ -126,54 +131,49 @@ struct BasketView: View {
                 }
             }
             .padding()
+            
             Button(action: {
                 self.isPresentingScanner = true
             }) {
                 
                 HStack{
                     Image(systemName: "camera.viewfinder")
-                            .font(.title2)
-                            .foregroundColor(.white)
+                        .font(.title2)
+                        .foregroundColor(.white)
                     Text("Scan Item")
-                    .fontWeight(.bold)
-                        //.font(.title)
+                        .fontWeight(.bold)
+                    //.font(.title)
                         .padding(5)
-                        
-                    }
-                    .padding(.vertical,5)
-                    .padding(.horizontal,10)
-                    .background(Color.blue)
-                    .cornerRadius(40)
-                    .foregroundColor(.white)
-                    //.padding(5)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 40)
-                            .stroke(Color.blue, lineWidth: 5)
-                    )
+                    
+                }
+                .padding(.vertical,5)
+                .padding(.horizontal,10)
+                .background(Color.blue)
+                .cornerRadius(40)
+                .foregroundColor(.white)
+                //.padding(5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 40)
+                        .stroke(Color.blue, lineWidth: 5)
+                )
             }
-            .padding()
-            
         }
         .sheet(isPresented: $isPresentingScanner) { self.scannerSheet }
         .sheet(isPresented: $isPresentingCheckout) { self.checkoutSheet }
         .onAppear() {
-            
             apiCall().getTransaction(customerId: customerId) { (transactionResponse) in
                 self.transactionResponse = transactionResponse
-                
             }
-        
         }
-                
     }
-    
+
     
     var scannerSheet : some View {
         
         ZStack {
             CodeScannerView(
                 codeTypes: [.qr,.dataMatrix,.ean8,.ean13,.code128,.interleaved2of5],
-                simulatedData: "535024",
+                simulatedData: "3457345",
                 completion: self.handleScan
             )
             #if targetEnvironment(simulator)
@@ -181,8 +181,8 @@ struct BasketView: View {
             #else
                 Image("viewfinder")
             #endif
-            
         }
+
     }
     
     var checkoutSheet: some View {
@@ -220,21 +220,31 @@ struct BasketView: View {
             //look up product
             apiCall().getProductDetails(productId: details,
                                         locationId: locationId) { (productDetailsResponse) in
+            
+            // add product to basket if it is found OK
+            if (productDetailsResponse.response == "OK") {
 
-            //add product to basket
-            apiCall().addItemToBasket(customerId: customerId,
-                                      productId:productDetailsResponse.productDetail.productId,
-                                      quantity: 1) { (basketResponse) in
-                
-                if self.transactionResponse.transaction == nil {
+                //add product to basket
+                apiCall().addItemToBasket(customerId: customerId,
+                                          productId:productDetailsResponse.productDetail!.productId,
+                                          quantity: 1) { (basketResponse) in
                     
-                    self.transactionResponse.transaction = Transaction()
-                    
-                }
+                    if self.transactionResponse.transaction == nil {
+                        
+                        self.transactionResponse.transaction = Transaction()
+                        
+                    }
 
                 self.transactionResponse.transaction!.basket = basketResponse.basket!
+                self.scannedCode = productDetailsResponse.productDetail!.description
+                self.scanMessage = ""
+                    
+                }
+            } else {
+                self.scannedCode = nil
+                self.scanMessage = "Product Not Found"
             }
-            self.scannedCode = productDetailsResponse.productDetail.description
+            
             self.isPresentingScanner = false
         }
  

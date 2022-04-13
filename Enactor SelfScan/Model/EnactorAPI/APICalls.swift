@@ -40,8 +40,24 @@ class apiCall {
         guard let url = URL(string: "\(baseURL)/rest/products/\(productId)?locationId=\(locationId)") else { return }
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in
-            let productDetailsResponse = try! JSONDecoder().decode(ProductDetailsResponse.self, from: data!)
-            //print(productDetailsResponse)
+
+            var productDetailsResponse = ProductDetailsResponse()
+            
+            productDetailsResponse.response = "Not Found"
+            
+            if !(data!.isEmpty) {
+            
+                productDetailsResponse = try! JSONDecoder().decode(ProductDetailsResponse.self, from: data!)
+                print(productDetailsResponse)
+                
+                if productDetailsResponse.productDetail != nil {
+                    
+                    productDetailsResponse.response = "OK"
+                    //do something
+                } else {
+                    productDetailsResponse.response = "Not Found"
+                }
+            }
             
             DispatchQueue.main.async {
                 completion(productDetailsResponse)

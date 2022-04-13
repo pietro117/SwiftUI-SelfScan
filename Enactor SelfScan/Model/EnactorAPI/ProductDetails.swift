@@ -42,11 +42,14 @@ struct ProductSearchResponse: Codable, Identifiable {
 struct ProductDetailsResponse: Codable, Identifiable {
     
     let id = UUID()
-    var productDetail: ProductDetailsItem
+    var response: String?
+    var productDetail: ProductDetailsItem?
     
-    init(productDetail: ProductDetailsItem = ProductDetailsItem()) {
+    init(productDetail: ProductDetailsItem? = ProductDetailsItem(), response: String? = "") {
+            self.response = response
             self.productDetail = productDetail
         }
+    
     
     
 }
