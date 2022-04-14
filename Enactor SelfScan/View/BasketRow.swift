@@ -22,7 +22,7 @@ struct BasketRow: View {
             HStack {
             
                 Image(systemName: "photo")
-                    .data(url: URL(string: basketItem.productImageURL ?? "")!)
+                    .data(url: URL(string: basketItem.productImageURL ?? "http://52.157.215.89:39832/WebRetailProcessing/images?resource=WEBSHOP/NoImageMedium.jpg")!)
                     .resizable()
                     .scaledToFit()
                     .frame(height: (showExtraDetails ? 175 : 30) )
