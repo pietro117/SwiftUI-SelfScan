@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Enactor SelfScan.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>11</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>B2DAB6183222AB5695036BD31C70D88D94292B2C</string>
+				<key>dateExpires</key>
+				<string>23/04/2024</string>
+				<key>type</key>
+				<string>Apple Development</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>YP97YH347J.com.enactor.presales.selfScan</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>YP97YH347J</string>
+				<key>get-task-allow</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>Enactor SelfScan.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>fd6e6246-96f3-4525-9295-10518f5cf0c3</string>
+				<key>dateExpires</key>
+				<string>23/04/2024</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: com.enactor.presales.selfScan</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>YP97YH347J</string>
+				<key>name</key>
+				<string>Enactor Limited</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0</string>
+		</dict>
+	</array>
+</dict>
+</plist>

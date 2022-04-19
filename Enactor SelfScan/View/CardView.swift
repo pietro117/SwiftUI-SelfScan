@@ -31,18 +31,37 @@ struct CardView: View {
                     .cornerRadius(10)
             }
             
-            //Image(item.image)
-            Image(systemName: "photo")
-                .data(url: URL(string: item.productImageURL ?? "")!)
-                .resizable()
-                .scaledToFit()
-                .frame(height: 120)
-                //.aspectRatio(contentMode: .fit)
-                .matchedGeometryEffect(id: "image\(item.productId)", in: animation)
-                .padding(.top,15)
-                .padding(.bottom)
-                //.padding(.horizontal,10)
+//            //Image(item.image)
+//            Image(systemName: "photo")
+//                .data(url: URL(string: item.productImageURL ?? "image\(item.productId)")!)
+//                .resizable()
+//                .scaledToFit()
+//                .frame(height: 120)
+//                //.aspectRatio(contentMode: .fit)
+//                .matchedGeometryEffect(id: "image\(item.productId)", in: animation)
+//                .padding(.top,15)
+//                .padding(.bottom)
+//                //.padding(.horizontal,10)
             
+            let urlString = item.productImageURL ?? "image\(item.productId)"
+            
+            AsyncImage(url: URL(string: urlString),
+                       content: { image in
+                            image.resizable()
+                                 .aspectRatio(contentMode: .fit)
+                                 .frame(width:150, height: 150)
+                                 .scaledToFit()
+                        },
+                       placeholder: {
+                           ProgressView()
+                       }
+                )
+              //.aspectRatio(contentMode: .fit)
+              .matchedGeometryEffect(id: "image\(item.productId)", in: animation)
+              .padding(.top,15)
+              .padding(.bottom)
+
+
             Text(item.description)
                 .fontWeight(.bold)
                 .foregroundColor(.black)    
@@ -73,10 +92,15 @@ struct CardView: View {
             .padding()
             
         }
-        .background(Color(red: 210 / 255, green: 240 / 255, blue: 255 / 255)
+        // Light Green - .background(Color(red: 199 / 255, green: 249 / 255, blue: 199 / 255)
+        .background(Color(red: 220 / 255, green:255 / 255, blue: 255 / 255)
         .matchedGeometryEffect(id: "color\(item.productId)", in: animation))
         .cornerRadius(15)
         
     }
+    
+    
+    
 }
+
 

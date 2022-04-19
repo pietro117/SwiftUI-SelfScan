@@ -9,25 +9,27 @@ import Foundation
 
 
 struct ProductDetailsItem: Codable, Identifiable {
-    let id = UUID()
+    var id = UUID()
     var productId: String = ""
     var description: String = ""
     var longDescription: String? = ""
     var price: NSInteger? = 0
     var productImageURL: String? = ""
+    var type: String = ""
     
-    init(productId: String = "", description: String = "", longDescription: String? = "", price: NSInteger? = 0, productImageURL: String? = "") {
+    init(productId: String = "", description: String = "", longDescription: String? = "", price: NSInteger? = 0, productImageURL: String? = "", type: String = "") {
             self.productId = productId
             self.description = description
             self.longDescription = longDescription
             self.price = price
             self.productImageURL = productImageURL
+            self.type = type
         }
 }
 
 struct ProductSearchResponse: Codable, Identifiable {
     
-    let id = UUID()
+    var id = UUID()
     var productDetails: [ProductDetailsItem]?
     var count: NSInteger?
     
@@ -41,7 +43,7 @@ struct ProductSearchResponse: Codable, Identifiable {
 
 struct ProductDetailsResponse: Codable, Identifiable {
     
-    let id = UUID()
+    var id = UUID()
     var response: String?
     var productDetail: ProductDetailsItem?
     

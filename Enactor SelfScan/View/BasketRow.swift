@@ -19,72 +19,83 @@ struct BasketRow: View {
         
         if !isDeleted {
         
-            HStack {
+            if basketItem.itemType != "cashTenderItem" {
             
-                Image(systemName: "photo")
-                    .data(url: URL(string: basketItem.productImageURL ?? "\(procBaseURL)/images?resource=WEBSHOP/NoImageMedium.jpg")!)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: (showExtraDetails ? 175 : 30) )
-                    //.aspectRatio(contentMode: .fit)
-                    //.padding(.horizontal,10)
+                HStack {
                 
-                VStack{
-                    HStack{
-                    Text(basketItem.description)
-                        .fontWeight(.heavy)
-                    Spacer()
-                    }
+                    Image(systemName: "photo")
+                        .data(url: URL(string: basketItem.productImageURL ?? "\(procBaseURL)/images?resource=WEBSHOP/NoImageMedium.jpg")!)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: (showExtraDetails ? 175 : 30) )
+                        //.aspectRatio(contentMode: .fit)
+                        //.padding(.horizontal,10)
                     
-                    
-                    HStack{
-                        Text("Qty: \(myUtils.getIntFormat(value: basketItem.quantity ?? 0))")
+                    VStack{
+                        HStack{
+                        Text(basketItem.description)
+                            .fontWeight(.heavy)
                         Spacer()
-                        Text(myUtils.getDisplayPrice(price: basketItem.value ?? 0))
-                    }
-                    Spacer()
-                    if showExtraDetails {
-                        Button(action: {
-                            self.removeItem(lineNumber: basketItem.lineNumber)
-                        }){
-                            Image(systemName: "minus.circle.fill")
-                                .font(.title2)
-                                .foregroundColor(.blue)
                         }
-                        .buttonStyle(PlainButtonStyle())
-                    }
+                        
+                        
+                        HStack{
+                            Text("Qty: \(myUtils.getIntFormat(value: basketItem.quantity ?? 0))")
+                            Spacer()
+                            Text(myUtils.getDisplayPrice(price: basketItem.value ?? 0))
+                        }
+                        Spacer()
+                        if showExtraDetails {
+                            Button(action: {
+                                self.removeItem(lineNumber: basketItem.lineNumber)
+                            }){
+                                Image(systemName: "minus.circle.fill")
+                                    .font(.title2)
+                                    .foregroundColor(.blue)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                        }
                     
-    //                if showExtraDetails {
-    //                    HStack {
-    //                        Button(action: {
-    //                            self.incrementQty()
-    //                        }){
-    //                            Image(systemName: "plus.square.fill")
-    //                                .font(.title2)
-    //                                .foregroundColor(.blue)
-    //                        }
-    //                        .buttonStyle(PlainButtonStyle())
-    //
-    //                        Button(action: {
-    //                            self.decrementQty()
-    //                        }){
-    //                            Image(systemName: "minus.square.fill")
-    //                                .font(.title2)
-    //                                .foregroundColor(.blue)
-    //                        }
-    //                        .buttonStyle(PlainButtonStyle())
-    //                        .opacity(basketItem.quantity! > 1.0 ? 1: 0)
-    //
-    //                        Spacer()
-    //                    }
-    //                }
+                    }
+                }.onTapGesture {
+                    showExtraDetails.toggle()
                 }
-            }.onTapGesture {
-                showExtraDetails.toggle()
+            } else if basketItem.itemType == "cashTenderItem" {
+                
+                // Tenderitem  - only show if negative value: ignore change
+                if (basketItem.value ?? 0) < 0 {
+                    HStack {
+                    
+                        Image(systemName: "creditcard.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 20 )
+                            //.aspectRatio(contentMode: .fit)
+                            .padding(.horizontal,10)
+                        
+                        VStack{
+                            HStack{
+                            Text(basketItem.description)
+                                .fontWeight(.heavy)
+                            Spacer()
+                            }
+                            
+                            
+                            HStack{
+                                
+                                Spacer()
+                                Text(myUtils.getDisplayPrice(price: basketItem.value ?? 0))
+                            }
+                            Spacer()
+
+                        }
+                    }
+                }
+        
             }
-    
         }
     }
+    
     
     
     func incrementQty() {

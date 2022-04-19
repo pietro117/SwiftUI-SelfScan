@@ -18,8 +18,6 @@ struct Home: View {
     @State var selectedCategory: MenuCategory = menuCategories[0]
     @State var productSearchResponse: ProductSearchResponse = ProductSearchResponse()
     
-
-    
     @Namespace var animation
     
    // @State private var isShowingScanner = false
@@ -59,6 +57,21 @@ struct Home: View {
                         BasketView()
                             .tabItem {Label("Bag", systemImage: "bag")}
                             .tag(4)
+            
+                        PaymentsView()
+                            .tabItem {Label("Payment", systemImage: "creditcard.fill")}
+                            .tag(5)
+            
+            if #available(iOS 16.0, *) {
+                RemoteAuthView()
+                    .tabItem {Label("Remote Auth", systemImage: "person.fill.questionmark")}
+                    .tag(6)
+//                    RemotePersView()
+//                        .tabItem {Label("Remote Pers", systemImage: "person.fill.questionmark")}
+//                        .tag(6)
+            } else {
+                // Fallback on earlier versions
+            }
             
             }
             

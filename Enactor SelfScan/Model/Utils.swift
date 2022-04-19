@@ -21,7 +21,7 @@ class Utils {
     
     func getDisplayPrice(price: Int) -> String   {
     
-        let currPrice = Double(price)/100 //TODO: improve this
+        let currPrice = Double(price)/100 //TODO: improve this to deal with non 1/100 currencies (e.g. JPY)
         guard let displayPrice = currencyFormatter.string(for: currPrice) else { return currencyFormatter.string(for: 0)! }
         return displayPrice
     
@@ -55,14 +55,10 @@ extension Image {
         if let data = try? Data(contentsOf: corrUrl!) {
 
             return Image(uiImage: UIImage(data: data)!)
-
-            .resizable()
-
+                .resizable()
         }
 
-        return self
-
-        .resizable()
+        return self.resizable()
 
     }
 

@@ -179,6 +179,46 @@ struct BasketResponse: Codable {
 
     }
 }
+
+struct BasketListResponse: Codable {
+    
+    //let id = UUID()
+    
+    var basketSummaries: [BasketSummary]?
+    
+    enum CodingKeys: String, CodingKey {
+        //case id
+        case basketSummaries
+
+    }
+    
+    init(
+        basketSummaries: [BasketSummary]? = [BasketSummary]()) {
+             
+         self.basketSummaries = basketSummaries
+    }
+}
+
+struct BasketSummary: Codable {
+    //var id: Int //=  UUID()
+    var reference: String
+    var type: String
+    var description: String
+    
+    enum CodingKeys: String, CodingKey {
+        //case id
+        case reference
+        case type
+        case description
+    }
+    
+    init(reference: String = "", type: String = "", description: String = "") {
+        self.reference = reference
+        self.type = type
+        self.description = description
+        }
+}
+
     
 struct AddBasketItem: Codable {
     
@@ -207,3 +247,30 @@ struct AddBasketItem: Codable {
     }
 }
 
+struct AddTender: Codable {
+    
+    var tenderType: String
+    var tenderId: String
+    var tenderAmount: Int
+    var referenceNumber: String
+    
+    enum CodingKeys: String, CodingKey {
+        //case id
+        case tenderType
+        case tenderId
+        case tenderAmount
+        case referenceNumber
+    }
+    
+    init(
+        tenderType: String,
+        tenderId: String,
+        tenderAmount: Int,
+        referenceNumber: String) {
+            self.tenderType = tenderType
+            self.tenderId = tenderId
+            self.tenderAmount = tenderAmount
+            self.referenceNumber = referenceNumber
+        
+    }
+}

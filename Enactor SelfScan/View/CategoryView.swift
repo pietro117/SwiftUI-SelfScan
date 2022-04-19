@@ -44,19 +44,23 @@ struct CategoryView: View {
                     //Welcome Message
                     HStack{
                     
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text("Welcome to")
-                                .font(.title)
-                                .foregroundColor(.black)
-                            
-                            Text("The Enactor Store")
-                                .font(.largeTitle)
-                                .fontWeight(.heavy)
-                                .foregroundColor(.black)
-                        }
-                        .padding(.horizontal)
+//                        VStack(alignment: .leading, spacing: 5) {
+//                            Text("Welcome to")
+//                                .font(.title)
+//                                .foregroundColor(.black)
+//
+//                            Text("The Enactor Store")
+//                                .font(.largeTitle)
+//                                .fontWeight(.heavy)
+//                                .foregroundColor(.black)
+//                        }
+//                        .padding(.horizontal)
                         
-                        Spacer(minLength: 0)
+                        Image("Card_Factory_logo_bluyellow")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 300, height: 50)
+                        
                         
                     }
                     
@@ -110,7 +114,7 @@ struct CategoryView: View {
         .onAppear() {
             apiCall().getProductSearchResponse(categoryId: selected.categoryCode) { (productSearchResponse) in
                 self.productSearchResponse = productSearchResponse
-                self.productDetails = productSearchResponse.productDetails!
+                self.productDetails = productSearchResponse.productDetails ?? self.productDetails
                 }
             }
 

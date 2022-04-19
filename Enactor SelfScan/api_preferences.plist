@@ -2,14 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>baseRemoteAuthURL</key>
+	<string>http://localhost:8085</string>
 	<key>locationId</key>
-	<string>0001</string>
+	<string>PRINTEMPS_FR_001</string>
 	<key>locale</key>
-	<string>en-GB</string>
+	<string>fr-FR</string>
 	<key>procBaseURL</key>
-	<string>http://52.157.215.89:39832/WebRetailProcessing</string>
+	<string>http://18.169.109.22:39832/WebRetailProcessing</string>
 	<key>baseURL</key>
-	<string>http://52.157.215.89:39833/WebRestApi</string>
+	<string>http://18.169.109.22:39833/WebRestApi</string>
 	<key>customerId</key>
 	<string>1</string>
 </dict>

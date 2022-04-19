@@ -1,0 +1,144 @@
+2023-10-04 05:27:16 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7fe1fa0bc820; archive(resolved)="<IDEArchive: 0x600013a42460>", distributionTask(resolved)="2", distributionDestination(resolved)="1", distributionMethod(resolved)="<IDEDistributionMethodDevelopmentSigned: 0x600005df38d0>", team(resolved)="<IDEProvisioningDisambiguatableBasicTeam: 0x6000000bfe00; teamID='YP97YH347J', teamName='Enactor Limited', teamType='Company', username='peter.rush@enactor.co.uk', isFreeProvisioningTeam='0'>">
+	Chain (14, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7fe1fa0bc820; archive = "<IDEArchive: 0x600013a42460>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600005df38d0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000000bfe00; teamID='YP97YH347J', teamName='Enactor Limited', teamType='Company', username='peter.rush@enactor.co.uk', isFreeProvisioningTeam='0'>">
+	<IDEDistributionProcessingPipelineContext: 0x7fe1fa0b8c20; archive = "<IDEArchive: 0x600013a42460>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600005df38d0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000000bfe00; teamID='YP97YH347J', teamName='Enactor Limited', teamType='Company', username='peter.rush@enactor.co.uk', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x7fe1fa24d440; archive = "<IDEArchive: 0x600013a42460>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600005df38d0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000000bfe00; teamID='YP97YH347J', teamName='Enactor Limited', teamType='Company', username='peter.rush@enactor.co.uk', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x7fe1f974c6d0; archive = "<IDEArchive: 0x600013a42460>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600005df38d0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000000bfe00; teamID='YP97YH347J', teamName='Enactor Limited', teamType='Company', username='peter.rush@enactor.co.uk', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x7fe21e95a9f0; archive = "<IDEArchive: 0x600013a42460>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600005df38d0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000000bfe00; teamID='YP97YH347J', teamName='Enactor Limited', teamType='Company', username='peter.rush@enactor.co.uk', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x7fe1f9751fb0; archive = "<IDEArchive: 0x600013a42460>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600005df38d0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000000bfe00; teamID='YP97YH347J', teamName='Enactor Limited', teamType='Company', username='peter.rush@enactor.co.uk', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x7fe21ee34cc0; archive = "<IDEArchive: 0x600013a42460>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600005df38d0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000000bfe00; teamID='YP97YH347J', teamName='Enactor Limited', teamType='Company', username='peter.rush@enactor.co.uk', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x7fe1ecddbf60; archive = "<IDEArchive: 0x600013a42460>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600005df38d0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000000bfe00; teamID='YP97YH347J', teamName='Enactor Limited', teamType='Company', username='peter.rush@enactor.co.uk', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x7fe1ee25fe70; archive = "<IDEArchive: 0x600013a42460>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600005df38d0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000000bfe00; teamID='YP97YH347J', teamName='Enactor Limited', teamType='Company', username='peter.rush@enactor.co.uk', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x7fe1f8240d60; archive = "<IDEArchive: 0x600013a42460>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600005df38d0>", team="(null)">
+	<IDEDistributionContext: 0x7fe20c750ef0; archive = "<IDEArchive: 0x600013a42460>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600005df38d0>", team="(null)">
+	<IDEDistributionContext: 0x7fe21d4e64d0; archive = "<IDEArchive: 0x600013a42460>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600005df38d0>", team="(null)">
+	<IDEDistributionContext: 0x7fe1f974d410; archive = "<IDEArchive: 0x600013a42460>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600005df38d0>", team="(null)">
+	<IDEDistributionContext: 0x7fe22cfeaaf0; archive = "<IDEArchive: 0x600013a42460>", distributionMethod="(null)", team="(null)">
+</IDEDistributionProcessingPipelineContext: 0x7fe1fa0bc820>
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionCreateDestRootStep
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionCopyItemStep
+2023-10-04 05:27:16 +0000  Running /usr/bin/ditto '-V' '/Users/peterrush/Library/Developer/Xcode/Archives/2023-10-04/Enactor SelfScan 04-10-2023, 07.26.xcarchive/Products/Applications/Enactor SelfScan.app' '/var/folders/q1/591vmwgs5j702jc4l5hqbplh0000gn/T/XcodeDistPipeline.~~~34qaM4/Root/Payload/Enactor SelfScan.app'
+2023-10-04 05:27:16 +0000  >>> Copying /Users/peterrush/Library/Developer/Xcode/Archives/2023-10-04/Enactor SelfScan 04-10-2023, 07.26.xcarchive/Products/Applications/Enactor SelfScan.app 
+2023-10-04 05:27:16 +0000  copying file ./_CodeSignature/CodeResources ... 
+2023-10-04 05:27:16 +0000  3869 bytes for ./_CodeSignature/CodeResources
+2023-10-04 05:27:16 +0000  copying file ./api_preferences.plist ... 
+2023-10-04 05:27:16 +0000  227 bytes for ./api_preferences.plist
+2023-10-04 05:27:16 +0000  copying file ./barcode_ipad.png ... 
+2023-10-04 05:27:16 +0000  10355 bytes for ./barcode_ipad.png
+2023-10-04 05:27:16 +0000  copying file ./ExampleBasket.json ... 
+2023-10-04 05:27:16 +0000  9379 bytes for ./ExampleBasket.json
+2023-10-04 05:27:16 +0000  copying file ./AppIcon60x60@2x.png ... 
+2023-10-04 05:27:16 +0000  6329 bytes for ./AppIcon60x60@2x.png
+copying file ./Assets.car ... 
+2023-10-04 05:27:16 +0000  670975 bytes for ./Assets.car
+2023-10-04 05:27:16 +0000  copying file ./AppIcon76x76@2x~ipad.png ... 
+2023-10-04 05:27:16 +0000  11081 bytes for ./AppIcon76x76@2x~ipad.png
+2023-10-04 05:27:16 +0000  copying file ./barcode_1024.png ... 
+2023-10-04 05:27:16 +0000  243438 bytes for ./barcode_1024.png
+2023-10-04 05:27:16 +0000  copying file ./Enactor SelfScan ... 
+2023-10-04 05:27:16 +0000  557280 bytes for ./Enactor SelfScan
+2023-10-04 05:27:16 +0000  copying file ./embedded.mobileprovision ... 
+2023-10-04 05:27:16 +0000  14897 bytes for ./embedded.mobileprovision
+2023-10-04 05:27:16 +0000  copying file ./barcode.png ... 
+2023-10-04 05:27:16 +0000  5972 bytes for ./barcode.png
+2023-10-04 05:27:16 +0000  copying file ./Info.plist ... 
+2023-10-04 05:27:16 +0000  1734 bytes for ./Info.plist
+2023-10-04 05:27:16 +0000  copying file ./PkgInfo ... 
+2023-10-04 05:27:16 +0000  8 bytes for ./PkgInfo
+2023-10-04 05:27:16 +0000  /usr/bin/ditto exited with 0
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionEmbedProfileStep
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionInfoPlistStep
+2023-10-04 05:27:16 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2023-10-04 05:27:16 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2023-10-04 05:27:16 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2023-10-04 05:27:16 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionSymbolsStep
+2023-10-04 05:27:16 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionAppThinningStep
+2023-10-04 05:27:16 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionArchThinningStep
+2023-10-04 05:27:16 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/q1/591vmwgs5j702jc4l5hqbplh0000gn/T/XcodeDistPipeline.~~~34qaM4/Root/Payload/Enactor SelfScan.app/Enactor SelfScan' '-verify_arch' 'arm64e'
+2023-10-04 05:27:16 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2023-10-04 05:27:16 +0000  Skipping architecture thinning for item "Enactor SelfScan" because arch "arm64e" wasn't found
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionODRStep
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionStripXattrsStep
+2023-10-04 05:27:16 +0000  Running /usr/bin/xattr '-crs' '/var/folders/q1/591vmwgs5j702jc4l5hqbplh0000gn/T/XcodeDistPipeline.~~~34qaM4/Root/Payload/Enactor SelfScan.app'
+2023-10-04 05:27:16 +0000  /usr/bin/xattr exited with 0
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionCodesignStep
+2023-10-04 05:27:16 +0000  Entitlements for <IDEDistributionItem: 0x600013a427c0; bundleID='com.enactor.presales.selfScan', path='<DVTFilePath:0x60000f51ebc0:'/Users/peterrush/Library/Developer/Xcode/Archives/2023-10-04/Enactor SelfScan 04-10-2023, 07.26.xcarchive/Products/Applications/Enactor SelfScan.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x6000079b3f20; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600002a98e70; name='Apple Development: Peter Rush (VGB2446V47)', hash='B2DAB6183222AB5695036BD31C70D88D94292B2C', serialNumber='732C01DC4DBA0E4FFB279940C57794D7', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2023-04-24 09:49:34 +0000''>', entitlements='{
+    "application-identifier" = "YP97YH347J.com.enactor.presales.selfScan";
+    "com.apple.developer.team-identifier" = YP97YH347J;
+    "get-task-allow" = 1;
+}', teamID='YP97YH347J', identifier='com.enactor.presales.selfScan', executablePath='<DVTFilePath:0x60000f63efb0:'/Users/peterrush/Library/Developer/Xcode/Archives/2023-10-04/Enactor SelfScan 04-10-2023, 07.26.xcarchive/Products/Applications/Enactor SelfScan.app/Enactor SelfScan'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "YP97YH347J.com.enactor.presales.selfScan";
+    "com.apple.developer.team-identifier" = YP97YH347J;
+    "get-task-allow" = 1;
+}
+2023-10-04 05:27:16 +0000  Entitlements for <IDEDistributionItem: 0x600013a427c0; bundleID='com.enactor.presales.selfScan', path='<DVTFilePath:0x60000f51ebc0:'/Users/peterrush/Library/Developer/Xcode/Archives/2023-10-04/Enactor SelfScan 04-10-2023, 07.26.xcarchive/Products/Applications/Enactor SelfScan.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x6000079b3f20; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600002a99970; name='Apple Development: Peter Rush (VGB2446V47)', hash='B2DAB6183222AB5695036BD31C70D88D94292B2C', serialNumber='732C01DC4DBA0E4FFB279940C57794D7', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2023-04-24 09:49:34 +0000''>', entitlements='{
+    "application-identifier" = "YP97YH347J.com.enactor.presales.selfScan";
+    "com.apple.developer.team-identifier" = YP97YH347J;
+    "get-task-allow" = 1;
+}', teamID='YP97YH347J', identifier='com.enactor.presales.selfScan', executablePath='<DVTFilePath:0x60000f63efb0:'/Users/peterrush/Library/Developer/Xcode/Archives/2023-10-04/Enactor SelfScan 04-10-2023, 07.26.xcarchive/Products/Applications/Enactor SelfScan.app/Enactor SelfScan'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "YP97YH347J.com.enactor.presales.selfScan";
+    "com.apple.developer.team-identifier" = YP97YH347J;
+    "get-task-allow" = 1;
+}
+2023-10-04 05:27:16 +0000  Writing entitlements for <IDEDistributionItem: 0x600013a427c0; bundleID='com.enactor.presales.selfScan', path='<DVTFilePath:0x60000f51ebc0:'/Users/peterrush/Library/Developer/Xcode/Archives/2023-10-04/Enactor SelfScan 04-10-2023, 07.26.xcarchive/Products/Applications/Enactor SelfScan.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x6000079b3f20; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600002a98580; name='Apple Development: Peter Rush (VGB2446V47)', hash='B2DAB6183222AB5695036BD31C70D88D94292B2C', serialNumber='732C01DC4DBA0E4FFB279940C57794D7', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2023-04-24 09:49:34 +0000''>', entitlements='{
+    "application-identifier" = "YP97YH347J.com.enactor.presales.selfScan";
+    "com.apple.developer.team-identifier" = YP97YH347J;
+    "get-task-allow" = 1;
+}', teamID='YP97YH347J', identifier='com.enactor.presales.selfScan', executablePath='<DVTFilePath:0x60000f63efb0:'/Users/peterrush/Library/Developer/Xcode/Archives/2023-10-04/Enactor SelfScan 04-10-2023, 07.26.xcarchive/Products/Applications/Enactor SelfScan.app/Enactor SelfScan'>', hardenedRuntime='0'>'> to: /var/folders/q1/591vmwgs5j702jc4l5hqbplh0000gn/T/XcodeDistPipeline.~~~34qaM4/entitlements~~~AifNUG
+2023-10-04 05:27:16 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'B2DAB6183222AB5695036BD31C70D88D94292B2C' '--entitlements' '/var/folders/q1/591vmwgs5j702jc4l5hqbplh0000gn/T/XcodeDistPipeline.~~~34qaM4/entitlements~~~AifNUG' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/q1/591vmwgs5j702jc4l5hqbplh0000gn/T/XcodeDistPipeline.~~~34qaM4/Root/Payload/Enactor SelfScan.app'
+2023-10-04 05:27:16 +0000  /var/folders/q1/591vmwgs5j702jc4l5hqbplh0000gn/T/XcodeDistPipeline.~~~34qaM4/Root/Payload/Enactor SelfScan.app: replacing existing signature
+2023-10-04 05:27:16 +0000  /var/folders/q1/591vmwgs5j702jc4l5hqbplh0000gn/T/XcodeDistPipeline.~~~34qaM4/Root/Payload/Enactor SelfScan.app: signed app bundle with Mach-O thin (arm64) [com.enactor.presales.selfScan]
+2023-10-04 05:27:16 +0000  /usr/bin/codesign exited with 0
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionZipODRItemStep
+2023-10-04 05:27:16 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionCreateIPAStep
+2023-10-04 05:27:16 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/q1/591vmwgs5j702jc4l5hqbplh0000gn/T/XcodeDistPipeline.~~~34qaM4/Root' '/var/folders/q1/591vmwgs5j702jc4l5hqbplh0000gn/T/XcodeDistPipeline.~~~34qaM4/Packages/Enactor SelfScan.ipa'
+2023-10-04 05:27:16 +0000  >>> Copying /var/folders/q1/591vmwgs5j702jc4l5hqbplh0000gn/T/XcodeDistPipeline.~~~34qaM4/Root 
+2023-10-04 05:27:16 +0000  copying file ./Payload/Enactor SelfScan.app/_CodeSignature/CodeResources ... 
+2023-10-04 05:27:16 +0000  3869 bytes for ./Payload/Enactor SelfScan.app/_CodeSignature/CodeResources
+2023-10-04 05:27:16 +0000  copying file ./Payload/Enactor SelfScan.app/api_preferences.plist ... 
+2023-10-04 05:27:16 +0000  227 bytes for ./Payload/Enactor SelfScan.app/api_preferences.plist
+2023-10-04 05:27:16 +0000  copying file ./Payload/Enactor SelfScan.app/barcode_ipad.png ... 
+2023-10-04 05:27:16 +0000  10355 bytes for ./Payload/Enactor SelfScan.app/barcode_ipad.png
+2023-10-04 05:27:16 +0000  copying file ./Payload/Enactor SelfScan.app/ExampleBasket.json ... 
+2023-10-04 05:27:16 +0000  9379 bytes for ./Payload/Enactor SelfScan.app/ExampleBasket.json
+2023-10-04 05:27:16 +0000  copying file ./Payload/Enactor SelfScan.app/AppIcon60x60@2x.png ... 
+2023-10-04 05:27:16 +0000  6329 bytes for ./Payload/Enactor SelfScan.app/AppIcon60x60@2x.png
+2023-10-04 05:27:16 +0000  copying file ./Payload/Enactor SelfScan.app/Assets.car ... 
+2023-10-04 05:27:16 +0000  670975 bytes for ./Payload/Enactor SelfScan.app/Assets.car
+copying file ./Payload/Enactor SelfScan.app/AppIcon76x76@2x~ipad.png ... 
+2023-10-04 05:27:16 +0000  11081 bytes for ./Payload/Enactor SelfScan.app/AppIcon76x76@2x~ipad.png
+copying file ./Payload/Enactor SelfScan.app/barcode_1024.png ... 
+2023-10-04 05:27:16 +0000  243438 bytes for ./Payload/Enactor SelfScan.app/barcode_1024.png
+2023-10-04 05:27:16 +0000  copying file ./Payload/Enactor SelfScan.app/Enactor SelfScan ... 
+2023-10-04 05:27:16 +0000  557280 bytes for ./Payload/Enactor SelfScan.app/Enactor SelfScan
+copying file ./Payload/Enactor SelfScan.app/embedded.mobileprovision ... 
+2023-10-04 05:27:16 +0000  14897 bytes for ./Payload/Enactor SelfScan.app/embedded.mobileprovision
+copying file ./Payload/Enactor SelfScan.app/barcode.png ... 
+2023-10-04 05:27:16 +0000  5972 bytes for ./Payload/Enactor SelfScan.app/barcode.png
+2023-10-04 05:27:16 +0000  copying file ./Payload/Enactor SelfScan.app/Info.plist ... 
+2023-10-04 05:27:16 +0000  1734 bytes for ./Payload/Enactor SelfScan.app/Info.plist
+copying file ./Payload/Enactor SelfScan.app/PkgInfo ... 
+2023-10-04 05:27:16 +0000  8 bytes for ./Payload/Enactor SelfScan.app/PkgInfo
+2023-10-04 05:27:16 +0000  /usr/bin/ditto exited with 0
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionAppStoreInformationStep
+2023-10-04 05:27:16 +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+2023-10-04 05:27:16 +0000  IDEDistributionItem init <DVTFilePath:0x60000f685f80:'/var/folders/q1/591vmwgs5j702jc4l5hqbplh0000gn/T/XcodeDistPipeline.~~~34qaM4/Root/Payload/Enactor SelfScan.app'>
+2023-10-04 05:27:16 +0000  Processing step: IDEDistributionCreateManifestStep

@@ -13,6 +13,7 @@ struct APIPreferences: Codable {
     var procBaseURL: String
     var locale: String
     var locationId: String
+    var baseRemoteAuthURL: String
 }
 
 class APIPreferencesLoader {
@@ -38,9 +39,9 @@ class APIPreferencesLoader {
     static func copyPreferencesFromBundle() {
       if let path = Bundle.main.path(forResource: "api_preferences", ofType: "plist"),
         let data = FileManager.default.contents(atPath: path),
-        FileManager.default.fileExists(atPath: plistURL.path) == false {
-          FileManager.default.createFile(atPath: plistURL.path, contents: data, attributes: nil)
-      }
+          FileManager.default.fileExists(atPath: plistURL.path) == false {
+            FileManager.default.createFile(atPath: plistURL.path, contents: data, attributes: nil)
+          }
     }
     
     static func write(preferences: APIPreferences) {

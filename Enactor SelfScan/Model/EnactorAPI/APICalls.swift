@@ -7,11 +7,11 @@
 
 import Foundation
 
-//let baseURL: String = "http://18.134.170.76:39833/WebRestApi"
 
 var preferences = APIPreferencesLoader.load()
 let baseURL: String = preferences.baseURL
 let procBaseURL: String = preferences.procBaseURL
+let baseRemoteAuthURL: String = preferences.baseRemoteAuthURL
 let locale: String = preferences.locale
 let customerId: String = preferences.customerId
 let locationId: String = preferences.locationId
@@ -21,11 +21,17 @@ class apiCall {
                                   completion:@escaping (ProductSearchResponse) -> ()) {
         guard let url = URL(string: "\(baseURL)/rest/products/?q=categoryId:\(categoryId)&rows=20") else { return }
         
-        URLSession.shared.dataTask(with: url) { (data, _, _) in
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
+            
+            if (error != nil) {
+                let productSearchResponse = ProductSearchResponse()
+                completion(productSearchResponse)
+                return
+            }
             
             var productSearchResponse = ProductSearchResponse()
             
-            if !(data == nil) {
+            if !(data!.isEmpty) {
                 productSearchResponse = try! JSONDecoder().decode(ProductSearchResponse.self, from: data!)
             //print(productSearchResponse)
             }
@@ -44,13 +50,19 @@ class apiCall {
         
         guard let url = URL(string: "\(baseURL)/rest/products/\(productId)?locationId=\(locationId)") else { return }
         
-        URLSession.shared.dataTask(with: url) { (data, _, _) in
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
 
+            if (error != nil) {
+                let productDetailsResponse = ProductDetailsResponse()
+                completion(productDetailsResponse)
+                return
+            }
+            
             var productDetailsResponse = ProductDetailsResponse()
             
             productDetailsResponse.response = "Not Found"
             
-            if !(data == nil) {
+            if !(data==nil) {
             
                 productDetailsResponse = try! JSONDecoder().decode(ProductDetailsResponse.self, from: data!)
                 print(productDetailsResponse)
@@ -72,9 +84,10 @@ class apiCall {
     }
     
     func getCustomerBasket(customerId: String,
+                           basketId: String,
                            completion:@escaping (BasketResponse) -> ()) {
         
-        guard let url = URL(string: "\(baseURL)/rest/baskets/PRIMARY") else { return }
+        guard let url = URL(string: "\(baseURL)/rest/baskets/\(basketId)") else { return }
                             
         var request = URLRequest(url: url)
             request.httpMethod = "GET"
@@ -91,13 +104,52 @@ class apiCall {
         
     }
     
+    func listCustomerBaskets(customerId: String,
+                             completion:@escaping (_ basketListResponse: BasketListResponse?) -> ()) {
+        
+        print("In listCustomerBasketsAPICall")
+    
+        guard let url = URL(string: "\(baseURL)/rest/baskets") else { return }
+    
+        var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.setValue(customerId, forHTTPHeaderField: "subject")
+            request.setValue("Basic \(getBasicAuth(username: customerId, password: customerId))", forHTTPHeaderField: "Authorization")
+    
+        let task = URLSession.shared.dataTask(with: request) { (data, _, error) in
+            
+            var basketListResponse = BasketListResponse()
+            
+            if error != nil {
+                            print("URLSession Error: \(String(describing: error?.localizedDescription))")
+                            completion(nil)
+                        } else {
+                            
+                            if !(data!.isEmpty) {
+                                print(String(decoding: data!, as: UTF8.self))
+                                
+                                if data!.count > 2 {
+                                    basketListResponse = try! JSONDecoder().decode(BasketListResponse.self, from: data!)
+                                    print(basketListResponse)
+                                } else {
+                                    
+                                }
+                            }
+                            
+                            completion(basketListResponse)
+                        }
+        }
+        task.resume()
+         
+    }   
+    
     func addItemToBasket(customerId: String,
                          productId: String,
                          quantity: Int,
                          completion:@escaping (BasketResponse) -> ()) {
         print("In addItemToBasket")
         
-        guard let url = URL(string: "\(baseURL)/rest/baskets/PRIMARY/items?returnBasket=true") else { return }
+        guard let url = URL(string: "\(baseURL)/rest/baskets/PRIMARY/items?returnBasket=true&updatePromotions=true") else { return }
         
         let jsonData = try! JSONEncoder().encode(AddBasketItem (itemId: productId,
                                                                 itemType: "PRODUCT",
@@ -164,9 +216,10 @@ class apiCall {
     }
     
     func getTransaction(customerId: String,
+                        basketId: String,
                         completion:@escaping (TransactionResponse) -> ()) {
      
-     guard let url = URL(string: "\(baseURL)/rest/baskets/PRIMARY/transaction") else { return }
+     guard let url = URL(string: "\(baseURL)/rest/baskets/\(basketId)/transaction") else { return }
                          
      var request = URLRequest(url: url)
          request.httpMethod = "GET"
@@ -204,7 +257,35 @@ class apiCall {
         .resume()
     }
     
+    func addTenderToBasket(customerId: String,
+                           basketId: String,
+                           value: Int,
+                           completion:@escaping () -> ()) {
+     
+        guard let url = URL(string: "\(baseURL)/rest/baskets/\(basketId)/tenders?returnBasket=true") else { return }
+     
+        let jsonData = try! JSONEncoder().encode(AddTender (tenderType: "CASH",
+                                                            tenderId: "PBL_FR",
+                                                            tenderAmount: value,
+                                                            referenceNumber: "Pay by Link"))
+        
+        var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.setValue(customerId, forHTTPHeaderField: "subject")
+            request.httpBody = jsonData
+            request.setValue("Basic \(getBasicAuth(username: customerId, password: customerId))", forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request) { (data, _, _) in
+            //print(String(decoding: data!, as: UTF8.self))
+
+            DispatchQueue.main.async {
+                completion()
+            }
+        }
+        .resume()
     
+    }
     
     func getBasicAuth(username: String, password:String) -> String {
         let loginString = String(format: "%@:%@", username, password)
@@ -216,3 +297,5 @@ class apiCall {
     
     
 }
+
+

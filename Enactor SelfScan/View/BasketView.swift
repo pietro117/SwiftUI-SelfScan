@@ -48,7 +48,8 @@ struct BasketView: View {
                         
                         if self.transactionResponse.transaction!.transactionId == "" {
                             
-                            apiCall().getTransaction(customerId: customerId) { (transactionResponse) in
+                            apiCall().getTransaction(customerId: customerId,
+                                                     basketId: "PRIMARY") { (transactionResponse) in
                                 self.transactionResponse = transactionResponse
                                 }
                         }
@@ -83,7 +84,7 @@ struct BasketView: View {
                 Spacer()
                 
                 //Promo Details
-                if self.transactionResponse.transaction!.basket.promotionCalculation != nil {
+                if self.transactionResponse.transaction!.basket.promotionCalculation != nil && self.transactionResponse.transaction!.basket.promotionCalculation?.itemsArray?.count ?? 0 > 0{
                     VStack{
                         
                         VStack(alignment:.leading, spacing: 8){
@@ -118,7 +119,8 @@ struct BasketView: View {
                 if self.transactionResponse.transaction != nil {
                     
                     Button(action: {
-                        apiCall().getTransaction(customerId: customerId) { (transactionResponse) in
+                        apiCall().getTransaction(customerId: customerId,
+                                                 basketId: "PRIMARY") { (transactionResponse) in
                             self.transactionResponse = transactionResponse
                         }
                     }) {
@@ -161,7 +163,8 @@ struct BasketView: View {
         .sheet(isPresented: $isPresentingScanner) { self.scannerSheet }
         .sheet(isPresented: $isPresentingCheckout) { self.checkoutSheet }
         .onAppear() {
-            apiCall().getTransaction(customerId: customerId) { (transactionResponse) in
+            apiCall().getTransaction(customerId: customerId,
+                                     basketId: "PRIMARY") { (transactionResponse) in
                 self.transactionResponse = transactionResponse
             }
         }
@@ -173,7 +176,7 @@ struct BasketView: View {
         ZStack {
             CodeScannerView(
                 codeTypes: [.qr,.dataMatrix,.ean8,.ean13,.code128,.interleaved2of5],
-                simulatedData: "3457345",
+                simulatedData: "26235271",
                 completion: self.handleScan
             )
             #if targetEnvironment(simulator)

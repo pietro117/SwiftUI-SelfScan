@@ -18,6 +18,7 @@ struct DetailView: View {
     @State var quantityEntered: String = "1"
     @State private var shouldShowMessageLabel = false
     
+    
     var body: some View {
         
         // utility functions here
@@ -63,14 +64,34 @@ struct DetailView: View {
                     }
                     
                     
-                    Image(systemName: "photo")
-                        .data(url: URL(string: selectedItem.productImageURL ?? "")!)
-                        .resizable()
-                        .scaledToFit()
-                        //.aspectRatio(contentMode: .fit)
-                        // since id is common...
-                        .matchedGeometryEffect(id: "image\(selectedItem.productId)", in: animation)
-                        .padding()
+//                    Image(systemName: "photo")
+//                        .data(url: URL(string: selectedItem.productImageURL ?? "")!)
+//                        .resizable()
+//                        .scaledToFit()
+//                        //.aspectRatio(contentMode: .fit)
+//                        // since id is common...
+//                        .matchedGeometryEffect(id: "image\(selectedItem.productId)", in: animation)
+//                        .padding()
+
+                    
+                    let urlString = (selectedItem.productImageURL ?? "")!
+                    
+                    AsyncImage(url: URL(string: urlString),
+                               content: { image in
+                                    image.resizable()
+                                         .aspectRatio(contentMode: .fit)
+                                         .frame(width:300  , height: 300)
+                                         .scaledToFit()
+                                },
+                               placeholder: {
+                                   ProgressView()
+                               }
+                        )
+                      //.aspectRatio(contentMode: .fit)
+                      .matchedGeometryEffect(id: "image\(selectedItem.productId)", in: animation)
+                      .padding(.top,15)
+                      .padding(.bottom)
+
                     
                     Text(selectedItem.description)
                         .font(.title)
@@ -102,7 +123,7 @@ struct DetailView: View {
                     }
                     .padding()
                 }
-                .background(Color(red: 210 / 255, green: 240 / 255, blue: 255 / 255)
+                .background(Color(red: 199 / 255, green: 249 / 255, blue: 199 / 255) //green
                 .matchedGeometryEffect(id: "color\(selectedItem.productId)", in: animation))
                 .cornerRadius(15)
                 .padding()
@@ -143,7 +164,8 @@ struct DetailView: View {
                 }
                 .padding()
                 .frame(width: UIScreen.main.bounds.width - 30, alignment: .leading)
-                .background(Color(red: 230  / 255, green: 255 / 255, blue: 230 / 255))
+                //.background(Color(red: 230  / 255, green: 255 / 255, blue: 230 / 255)) //green
+                .background(Color(red: 210 / 255, green: 240 / 255, blue: 255 / 255)) // blue
                 
                 if shouldShowMessageLabel {
 
@@ -154,8 +176,13 @@ struct DetailView: View {
                 Button(action: {
                     
                     //add product to basket
+                    
+                    // For style products, add suffix to make them a sku
+                    // this is a kludge, obviously
+
+                    
                     apiCall().addItemToBasket(customerId: "1",
-                                              productId:selectedItem.productId,
+                                              productId:(selectedItem.type == "styleColourSizeProduct" ? selectedItem.productId + "-11" : selectedItem.productId),
                                               quantity: 1, completion: { _ in })
                     
                     self.animateAndDelayWithSeconds(1) { self.shouldShowMessageLabel = true }
