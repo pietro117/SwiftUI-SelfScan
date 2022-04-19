@@ -21,11 +21,17 @@ class apiCall {
                                   completion:@escaping (ProductSearchResponse) -> ()) {
         guard let url = URL(string: "\(baseURL)/rest/products/?q=categoryId:\(categoryId)&rows=20") else { return }
         
-        URLSession.shared.dataTask(with: url) { (data, _, _) in
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
+            
+            if (error != nil) {
+                let productSearchResponse = ProductSearchResponse()
+                completion(productSearchResponse)
+                return
+            }
             
             var productSearchResponse = ProductSearchResponse()
             
-            if !(data == nil) {
+            if !(data!.isEmpty) {
                 productSearchResponse = try! JSONDecoder().decode(ProductSearchResponse.self, from: data!)
             //print(productSearchResponse)
             }
@@ -44,13 +50,19 @@ class apiCall {
         
         guard let url = URL(string: "\(baseURL)/rest/products/\(productId)?locationId=\(locationId)") else { return }
         
-        URLSession.shared.dataTask(with: url) { (data, _, _) in
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
 
+            if (error != nil) {
+                let productDetailsResponse = ProductDetailsResponse()
+                completion(productDetailsResponse)
+                return
+            }
+            
             var productDetailsResponse = ProductDetailsResponse()
             
             productDetailsResponse.response = "Not Found"
             
-            if !(data == nil) {
+            if !(data!.isEmpty) {
             
                 productDetailsResponse = try! JSONDecoder().decode(ProductDetailsResponse.self, from: data!)
                 print(productDetailsResponse)
