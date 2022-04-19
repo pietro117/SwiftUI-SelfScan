@@ -27,7 +27,7 @@ struct Home: View {
     var body: some View {
             
         TabView(selection: $tabSelection) {
-                    ZStack{
+                    ZStack{  
                         
                         CategoryView(show: $show,
                                      animation: animation,

@@ -22,9 +22,14 @@ class apiCall {
         guard let url = URL(string: "\(baseURL)/rest/products/?q=categoryId:\(categoryId)&rows=20") else { return }
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in
-            let productSearchResponse = try! JSONDecoder().decode(ProductSearchResponse.self, from: data!)
-            //print(productSearchResponse)
             
+            var productSearchResponse = ProductSearchResponse()
+            
+            if !(data == nil) {
+                productSearchResponse = try! JSONDecoder().decode(ProductSearchResponse.self, from: data!)
+            //print(productSearchResponse)
+            }
+                
             DispatchQueue.main.async {
                 completion(productSearchResponse)
             }
@@ -45,7 +50,7 @@ class apiCall {
             
             productDetailsResponse.response = "Not Found"
             
-            if !(data!.isEmpty) {
+            if !(data == nil) {
             
                 productDetailsResponse = try! JSONDecoder().decode(ProductDetailsResponse.self, from: data!)
                 print(productDetailsResponse)
