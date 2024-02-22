@@ -62,7 +62,7 @@ class apiCall {
             
             productDetailsResponse.response = "Not Found"
             
-            if !(data==nil) {
+            if !(data!.isEmpty) {
             
                 productDetailsResponse = try! JSONDecoder().decode(ProductDetailsResponse.self, from: data!)
                 print(productDetailsResponse)
